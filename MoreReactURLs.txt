@@ -1,0 +1,15 @@
+Eval is evil - Why we should not use eval in JavaScript:
+https://dev.to/amitkhonde/eval-is-evil-why-we-should-not-use-eval-in-javascript-1lbh
+
+Eval is Evil, But Not Why You May Think:
+https://medium.com/mail-online/eval-is-evil-but-not-why-you-may-think-25961f9b01bb
+
+React Tutorial: A Comprehensive Guide for Beginners (2021):
+https://ibaslogic.com/react-tutorial-for-beginners/
+
+React Tutorial: A Comprehensive Guide for Beginners (2023):
+https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch
+
+Modern.js Is A Giant Mystery Meat Enchilada:
+https://bytes.dev/archives/182?ck_subscriber_id=1864593676
+

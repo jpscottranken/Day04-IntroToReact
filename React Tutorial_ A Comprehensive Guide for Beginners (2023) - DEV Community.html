@@ -1,0 +1,2861 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch -->
+<html lang="en" class="js-focus-visible" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>React Tutorial: A Comprehensive Guide for Beginners (2023) - DEV Community</title>
+      <meta name="last-updated" content="2023-04-27 17:22:33 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1682616153">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/minimal-d114bcbf6809795470a39fb3f59bbce249af94b894244ef230c92d0d5b52eb42.css" media="all" id="main-minimal-stylesheet">
+<link rel="stylesheet" href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet">
+<link rel="stylesheet" href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/crayons-10025cf3b105dbd17637fe17c4af2d76c34e4cd183a5c7f532b22f1ba5bb6c0e.css" media="all" id="main-crayons-stylesheet">
+
+      <script async="" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/analytics.js.download"></script><script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/base-593d806dd4e912e7e0fc50c86fe3f80768e81a816937e86a4cd4735daa553f4a.js.download" defer="defer"></script>
+        <script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~base-67097ce873eaf1b6e16f.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/base-9635d4af1afc57fe275c.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~baseInitializers-21ca5b0e2b6aff873fbe.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/baseInitializers-e1b1d7ae15d80cd9d14a.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~Search-9c1b07a2bc8029e9b4e0.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/0-9327fbce804fdf0ee02e.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/1-8e0fdc1cb9064484613e.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/Search-1de0a8e1ce9df927cbe0.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~runtimeBanner-fd0eb5d44d82e9000c7e.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtimeBanner-dd82fab2bc0d97d3a415.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~baseTracking-5ab59b4854e95a1f62f8.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/baseTracking-8838f55b694eae840610.chunk.js.download" defer="defer"></script>
+      
+    <link rel="canonical" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch">
+    <meta name="description" content="Learn React and build this todos project with this course.   Do you want to learn React and build... Tagged with react, javascript, webdev, tutorial.">
+    <meta name="keywords" content="react, javascript, webdev, tutorial, software, coding, development, engineering, inclusive, community">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch">
+    <meta property="og:title" content="React Tutorial: A Comprehensive Guide for Beginners (2023)">
+    <meta property="og:description" content="Learn React and build this todos project with this course.   Do you want to learn React and build...">
+    <meta property="og:site_name" content="DEV Community">
+    <meta name="twitter:site" content="@thepracticaldev">
+    <meta name="twitter:creator" content="@ibaslogic">
+    <meta name="twitter:title" content="React Tutorial: A Comprehensive Guide for Beginners (2023)">
+    <meta name="twitter:description" content="Learn React and build this todos project with this course.   Do you want to learn React and build...">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:widgets:new-embed-design" content="on">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+      <meta property="og:image" content="https://res.cloudinary.com/practicaldev/image/fetch/s--Mfad_puD--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kvhafmdxlmubh9fddouf.png">
+      <meta name="twitter:image:src" content="https://res.cloudinary.com/practicaldev/image/fetch/s--Mfad_puD--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kvhafmdxlmubh9fddouf.png">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128">
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community">
+
+      <meta property="forem:name" content="DEV Community">
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <meta property="forem:domain" content="dev.to">
+  <script charset="utf-8" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/171-85ee70e07e894202aa54.chunk.js.download"></script><script charset="utf-8" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/176-e999df0c90f3da5959be.chunk.js.download"></script><script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/js" async=""></script><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="nJLB1u7u0Zo70aQhcQ2NuxlQTeteAgeNEn903I2_AwEgrYar--a85Nkjp4rC-lDtUbuHcnBWzJzGOO5XS-ZBaA"><style id="ff-styles">
+  .ff-container{display:inline-block;position:relative}.ff-container .ff-image{z-index:0;vertical-align:top;opacity:0}.ff-container .ff-canvas{display:inline-block;position:absolute;top:0;left:0;pointer-events:none;z-index:1;vertical-align:top;opacity:0}.ff-container .ff-canvas.ff-canvas-ready{-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;-moz-transition:opacity 300ms;transition:opacity 300ms;opacity:1}.ff-container.ff-active .ff-image{opacity:1}.ff-container.ff-active .ff-canvas.ff-canvas-ready{-webkit-transition:none;-o-transition:none;-moz-transition:none;transition:none;opacity:0}.ff-container.ff-active .ff-overlay{display:none}.ff-container.ff-inactive .ff-canvas.ff-canvas-ready{-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;-moz-transition:opacity 300ms;transition:opacity 300ms;opacity:1}.ff-container.ff-inactive .ff-image{-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;-moz-transition:opacity 300ms;transition:opacity 300ms;-webkit-transition-delay:170ms;-moz-transition-delay:170ms;-o-transition-delay:170ms;transition-delay:170ms;opacity:0}.ff-container.ff-responsive{width:100%}.ff-container.ff-responsive .ff-image,.ff-container.ff-responsive .ff-canvas{width:100%}.ff-container.ff-loading-icon:before{content:"";position:absolute;background-image:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPSc1MHB4JyBoZWlnaHQ9JzUwcHgnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiBjbGFzcz0idWlsLXNwaW4iPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MCA1MCkiPjxnIHRyYW5zZm9ybT0icm90YXRlKDApIHRyYW5zbGF0ZSgzNCAwKSI+PGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjgiIGZpbGw9IiNmZmZmZmYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIGZyb209IjEiIHRvPSIwLjEiIGJlZ2luPSIwcyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZT48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InNjYWxlIiBmcm9tPSIxLjUiIHRvPSIxIiBiZWdpbj0iMHMiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGVUcmFuc2Zvcm0+PC9jaXJjbGU+PC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDQ1KSB0cmFuc2xhdGUoMzQgMCkiPjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI4IiBmaWxsPSIjZmZmZmZmIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiBmcm9tPSIxIiB0bz0iMC4xIiBiZWdpbj0iMC4xMnMiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJzY2FsZSIgZnJvbT0iMS41IiB0bz0iMSIgYmVnaW49IjAuMTJzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvY2lyY2xlPjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSg5MCkgdHJhbnNsYXRlKDM0IDApIj48Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iOCIgZmlsbD0iI2ZmZmZmZiI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ib3BhY2l0eSIgZnJvbT0iMSIgdG89IjAuMSIgYmVnaW49IjAuMjVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGZyb209IjEuNSIgdG89IjEiIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L2NpcmNsZT48L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMTM1KSB0cmFuc2xhdGUoMzQgMCkiPjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI4IiBmaWxsPSIjZmZmZmZmIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiBmcm9tPSIxIiB0bz0iMC4xIiBiZWdpbj0iMC4zN3MiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJzY2FsZSIgZnJvbT0iMS41IiB0bz0iMSIgYmVnaW49IjAuMzdzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvY2lyY2xlPjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgxODApIHRyYW5zbGF0ZSgzNCAwKSI+PGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjgiIGZpbGw9IiNmZmZmZmYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIGZyb209IjEiIHRvPSIwLjEiIGJlZ2luPSIwLjVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGZyb209IjEuNSIgdG89IjEiIGJlZ2luPSIwLjVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvY2lyY2xlPjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgyMjUpIHRyYW5zbGF0ZSgzNCAwKSI+PGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjgiIGZpbGw9IiNmZmZmZmYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIGZyb209IjEiIHRvPSIwLjEiIGJlZ2luPSIwLjYycyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZT48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InNjYWxlIiBmcm9tPSIxLjUiIHRvPSIxIiBiZWdpbj0iMC42MnMiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGVUcmFuc2Zvcm0+PC9jaXJjbGU+PC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDI3MCkgdHJhbnNsYXRlKDM0IDApIj48Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iOCIgZmlsbD0iI2ZmZmZmZiI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ib3BhY2l0eSIgZnJvbT0iMSIgdG89IjAuMSIgYmVnaW49IjAuNzVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGZyb209IjEuNSIgdG89IjEiIGJlZ2luPSIwLjc1cyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L2NpcmNsZT48L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMzE1KSB0cmFuc2xhdGUoMzQgMCkiPjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI4IiBmaWxsPSIjZmZmZmZmIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiBmcm9tPSIxIiB0bz0iMC4xIiBiZWdpbj0iMC44N3MiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJzY2FsZSIgZnJvbT0iMS41IiB0bz0iMSIgYmVnaW49IjAuODdzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvY2lyY2xlPjwvZz48L2c+PC9zdmc+");background-position:center center;background-repeat:no-repeat;height:46px;width:46px;z-index:3;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}.ff-container .ff-overlay{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAABeCAQAAAAA22vlAAAGFklEQVR42t2ce0yVdRjHP9zlKnfQAwoqV80bImCR90tGhJmShVOxVFJBrdSWVmvmnJlSm2ZbWwunlc4ZOf5IV7NJ84KmFpmZioiKigoKyPWct72vJ4dj0Lm8t9Nz/jt/fd73/L6/5/v8fs9z4H8VTjjhjAuu5o8LLtJ3DoEuYnvghS89pY8PnrjjgrPeH0BEd8fbEHRpaVOZqVUQ2m/cLfomGX+8pAfQ8S8gonvglx/TeEToEKbW69vnD6Annrjp9QEevnU/Q0RDmdAp2m6ffSs0DD964KrHBeSEK96EnlgtdBGN5T9kEYQPHvp7AGc8CCCq7ozQTdzdv2U4AXjrTQEueBFGorFN6DaMzZWFU/t2UIAuwhVfIkkSLIiW6lOLfULx1Y8C3PAnmjTBwmg4UTyFQLzx0MMCcieQAaQLlofp1u73B+sjB7gTRCyjBavCWF+xPs2gvQJE+DjGCFZH8+WjuQRrqwB3gm2DF+P+4Z1jJQVotIDsghcEk7H6q4I4/M02TuUHsBNejPa6c2sTemlhImSAF6Pp/M/ZkgJUNREywYtRe3B7mroKkBFetNFXP5vTXz0bLSu8ZKNr/nhDLRstO7xko39Tx0YrAi/G7e+Vt9GKwYs2uqowK0pJE6EgvKSAG7/nK2ejFYaXbPSpkgxlFKACvKSAfR8Pk18BKsELgrGpcovchaRq8IJUSJ5eIqcCVIWXFHBy/1QC5VGA6vCii7i9d+NQOQpJLeBFBTy4vMl+BWgELyng2q95hNijAA3hJQWUPTpKcbV+AWkMLylgzwdDbFOA9vCiAhovb5zQx3oF6AJeUkDVyQXWHqXoBl5SwLF9k6w5TNQVvHSY+K3lh4l6gxcV0FCxIc1gSSGpQ3hJAZWl2QTghVt3+DqFF3+AMwUE4SXt/w4HL5hatoonoZ5db546hheEq3sQ1767Q8I33yKGYOndOx68IDCE3vg4JLypnWRE2+DqgPC3K0glGn+HhC8pIpUoh3zzd24aZpJEJL4OB3+vNnMlExlEON4OJViTUFqWsJwsUulHID1wdhj4C1XZn7KA6aSTQDg+XRsEncHX3lu323k5c3medAYiXlR7OIQ9aG3bfSjobRaQzWRSiMeAv2SL9W/MjpWnrOd1csggnSH049+rIb37+crq3M/JZw7TGEcScRgsu1XUHL6+cfN3riuYzwwmkkIifSw/iNIUvt1Y/EvkWhbxEs/wJE8QTZg1ByAawp/+a9xHLGY2mYxmGAPoZe31g0bw1TUFX5LPPGmVjyCOCFsufjSAf9C0vcTzTV5lJpNJJZG+hNh26awyvNF08PiA91jEyzzLUwyWtkR/W6/7VYX/81JmIUukVT6GYcTQ275GC9Xga2rX7GQZuUxnAsnEE2l/k5cq8M0tRQd7rmKBtMrTGEQUoXK0VigObxIOnxq8jjxeMSf+/oTL1dioMPzFqllbWcocshhDErGWJn7N4evurxftbS4vMpGRJNBH7lZGheDb2vYcChHtrZj4R0mrPEz+/g9F4MvOjtpgtrdPM5T+9FKmfVd2+Gs3874gn7mP7G3Eo/tuJ123rDQ2bdvvISb+GUyy1t5qCm80HTje710WMYuptthbDeHPVTxK/KPNiV+FMQ0Z4O/Urdn1WOKPIFidARk74Vtbd/0YsPqxxB+iXlexXfBHy0d82CnxezpAO+6V6nnbzYl/rPyJX0H4hsbC4g4VvwKJXyF4o7HkSF87Kn4N4csvTNncqeL30m7swuKBl5q7q3ZQwDxeYLztFb/c8LGM/q/xuuaWogO+K3nNXPEPtL3ilxdeGvK6fr479NLTUi0kVvwPD0HDba/45QzzeN2ObV2BV1zL2dahForRYkvsKsyDjZ7TrvzdGfxe/aa9zuKWqFgtZF+YR0oZH7/w4oWO4O3txaWGd1iobC1kX5iHeUkmwy33k68vXWlvF4S6+p/Kxm0gjxyeU7YWsi/MY9TEkUYGOeSxjBXks4jZZHU6BNXZGLt5gJ1exJLMeDKZwUymk8E4RipfC8mB74EfoUSRyHBSSGUkQ4nX4yrv6u17E0AYEUQRTV8MhDjCnzbgaH+X8Q8RGKy7dFBuqQAAAABJRU5ErkJggg==");background-repeat:no-repeat;max-width:94px;max-height:94px;position:absolute;left:0%;right:0%;top:0%;bottom:0%;margin:auto;-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;background-position:center;pointer-events:none;z-index:100}
+</style><script charset="utf-8" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/170-4037adf7bb327b2ae606.chunk.js.download"></script></head>
+      <body class="sans-serif-article-body default-header" data-user-status="logged-out" data-community-name="DEV Community" data-locale="en" data-honeybadger-key="hbp_nqu4Y66HuEKlD6YRGssZuRQnPOjDm50J8Zkr" data-deployed-at="2023-04-27T14:44:31Z" data-latest-commit-id="8b1a825397694b225900fe6ac251ddfbbbf2e8d6" data-ga-tracking="UA-71991109-1" data-ga4-tracking-id="G-TYEM8Y3JN3" data-runtime="Browser-Windows" data-loaded="true">
+        <link rel="stylesheet" href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/minimal-d114bcbf6809795470a39fb3f59bbce249af94b894244ef230c92d0d5b52eb42.css" media="all" id="secondary-minimal-stylesheet">
+<link rel="stylesheet" href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet">
+<link rel="stylesheet" href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/crayons-10025cf3b105dbd17637fe17c4af2d76c34e4cd183a5c7f532b22f1ba5bb6c0e.css" media="all" id="secondary-crayons-stylesheet">
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a47h2d3mc9lc53umxazlc4qc17osgchb" class="crayons-icon"><title id="a47h2d3mc9lc53umxazlc4qc17osgchb">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="https://dev.to/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search"><form method="get" action="https://dev.to/search" role="search" accept-charset="UTF-8"><input name="utf8" type="hidden" value="✓"><div class="crayons-fields crayons-fields--horizontal"><div class="crayons-field flex-1 relative"><input class="crayons-header--search-input crayons-textfield" type="text" id="" name="q" placeholder="Search..." autocomplete="off" aria-label="Search term"><button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="crayons-icon c-btn__icon" focusable="false"><path d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"></path></svg></button></div></div></form>
+      
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="https://dev.to/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="an4d0yvlundvtal2iuokfsx8ygzwpwjo" class="crayons-icon"><title id="an4d0yvlundvtal2iuokfsx8ygzwpwjo">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="https://dev.to/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant="">
+              Log in
+            </a>
+          </span>
+
+          <a href="https://dev.to/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant="">
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a918f9wp3p9yrsjzd5f22mmrl1nbk1tj" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="a918f9wp3p9yrsjzd5f22mmrl1nbk1tj">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper stories stories-show" data-current-page="stories-show">
+  <div id="page-content-inner" data-follow-clicks-initialized="true">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+
+
+<style>
+  .html-variant-wrapper { display: none}
+</style>
+
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/webcomponents-loader.js.download" integrity="sha384-3HK5hxQbkFqOIxMbpROlRmRtYl2LBZ52t+tqcjzsmr9NJuOWQxl8RgQSyFvq2lhy" crossorigin="anonymous" defer=""></script>
+
+  <script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~webShare-833bafa62e471b95bffd.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/webShare-646a65f035317002b7f4.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~articlePage-1fa64e9d97ce9fd8382a.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/0-9327fbce804fdf0ee02e.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/1-8e0fdc1cb9064484613e.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/articlePage-86889f0cd0246dcc5898.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~commentDropdowns-a1d32ef3841d3bdf388f.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/commentDropdowns-169b7da27e24248cf220.chunk.js.download" defer="defer"></script>
+
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch"},"url":"https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch","image":["https://res.cloudinary.com/practicaldev/image/fetch/s--Pz0ZqKrN--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kvhafmdxlmubh9fddouf.png","https://res.cloudinary.com/practicaldev/image/fetch/s--xwTI3xsL--/c_imagga_scale,f_auto,fl_progressive,h_720,q_auto,w_1280/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kvhafmdxlmubh9fddouf.png","https://res.cloudinary.com/practicaldev/image/fetch/s--DjR-HW7Y--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kvhafmdxlmubh9fddouf.png"],"publisher":{"@context":"http://schema.org","@type":"Organization","name":"DEV Community","logo":{"@context":"http://schema.org","@type":"ImageObject","url":"https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png","width":"192","height":"192"}},"headline":"React Tutorial: A Comprehensive Guide for Beginners (2023)","author":{"@context":"http://schema.org","@type":"Person","url":"https://dev.to/ibaslogic","name":"Ibas"},"datePublished":"2021-02-08T12:28:36Z","dateModified":"2023-02-16T09:41:27Z"}
+    </script>
+
+  
+<div class="crayons-layout crayons-layout--3-cols crayons-layout--article">
+  <aside class="crayons-layout__sidebar-left" aria-label="Article actions">
+    <div class="crayons-article-actions print-hidden">
+  <div class="crayons-article-actions__inner">
+
+    
+<div class="reaction-drawer__outer hoverdown" style="">
+  <button id="reaction-drawer-trigger" aria-label="reaction-drawer-trigger" aria-pressed="false" class="hoverdown-trigger crayons-reaction pseudo-reaction crayons-tooltip__activator relative">
+      <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction--like crayons-reaction__icon--inactive" style="width: 40px; height: 40px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon">
+    <g clip-path="url(#clip0_988_3276)">
+        <path d="M19 14V17H22V19H18.999L19 22H17L16.999 19H14V17H17V14H19ZM20.243 4.75698C22.505 7.02498 22.583 10.637 20.479 12.992L19.059 11.574C20.39 10.05 20.32 7.65998 18.827 6.16998C17.324 4.67098 14.907 4.60698 13.337 6.01698L12.002 7.21498L10.666 6.01798C9.09103 4.60598 6.67503 4.66798 5.17203 6.17198C3.68203 7.66198 3.60703 10.047 4.98003 11.623L13.412 20.069L12 21.485L3.52003 12.993C1.41603 10.637 1.49503 7.01898 3.75603 4.75698C6.02103 2.49298 9.64403 2.41698 12 4.52898C14.349 2.41998 17.979 2.48998 20.242 4.75698H20.243Z" fill="#525252"></path>
+    </g>
+    <defs>
+        <clippath id="clip0_988_3276">
+        <rect width="24" height="24" fill="white"></rect>
+        </clippath>
+    </defs>
+</svg>
+
+      </span>
+      <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--active" style="width: 40px; height: 40px">
+        <img aria_hidden="true" height="24" width="24" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg">
+      </span>
+      <span class="crayons-reaction__count" id="reaction_total_count">63</span>
+      <span class="crayons-tooltip__content">
+        Add reaction
+      </span>
+  </button>
+
+  <div class="reaction-drawer" aria-expanded="false">
+    <div class="reaction-drawer__container">
+        <button id="reaction-butt-like" name="Like" aria-label="Like" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2 activated" data-category="like">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg">
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-like">53</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+</button>
+
+        <button id="reaction-butt-unicorn" name="Unicorn" aria-label="Unicorn" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2 activated" data-category="unicorn">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg">
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-unicorn">10</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Unicorn
+    </span>
+</button>
+
+        <button id="reaction-butt-exploding_head" name="Exploding Head" aria-label="Exploding Head" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2" data-category="exploding_head">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg">
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-exploding_head">0</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Exploding Head
+    </span>
+</button>
+
+        <button id="reaction-butt-raised_hands" name="Raised Hands" aria-label="Raised Hands" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2" data-category="raised_hands">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg">
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-raised_hands">0</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Raised Hands
+    </span>
+</button>
+
+        <button id="reaction-butt-fire" name="Fire" aria-label="Fire" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2" data-category="fire">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg">
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-fire">0</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Fire
+    </span>
+</button>
+
+    </div>
+  </div>
+</div>
+
+<button id="reaction-butt-comment" aria-label="Jump to Comments" aria-pressed="false" class="crayons-reaction crayons-reaction--comment crayons-tooltip__activator relative" data-category="comment">
+    <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M10 3h4a8 8 0 010 16v3.5c-5-2-12-5-12-11.5a8 8 0 018-8zm2 14h2a6 6 0 000-12h-4a6 6 0 00-6 6c0 3.61 2.462 5.966 8 8.48V17z"></path>
+</svg>
+
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-comment" data-count="0">0</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Jump to Comments
+    </span>
+</button>
+
+<button id="reaction-butt-readinglist" aria-label="Add to reading list" aria-pressed="false" class="crayons-reaction crayons-reaction--readinglist crayons-tooltip__activator relative activated" data-category="readinglist">
+    <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z"></path>
+</svg>
+
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-readinglist">173</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Save
+    </span>
+</button>
+
+
+
+    <div id="mod-actions-menu-btn-area" class="print-hidden hidden align-center"></div>
+    <div class="align-center m:relative">
+      <button id="article-show-more-button" aria-controls="article-show-more-dropdown" aria-expanded="false" aria-haspopup="true" class="dropbtn crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon-rounded" aria-label="Share post options" data-initialized="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ahls7ycj2cah7rv9vkkgydz70f8ckki2" aria-hidden="true" class="crayons-icon dropdown-icon"><title id="ahls7ycj2cah7rv9vkkgydz70f8ckki2">More...</title><path fill-rule="evenodd" clip-rule="evenodd" d="M7 12a2 2 0 11-4 0 2 2 0 014 0zm7 0a2 2 0 11-4 0 2 2 0 014 0zm5 2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+
+      </button>
+
+      <div id="article-show-more-dropdown" class="crayons-dropdown side-bar left-2 right-2 m:right-auto m:left-100 s:left-auto mb-1 m:mb-0 top-unset bottom-100 m:top-0 m:bottom-unset">
+        <div>
+          <button id="copy-post-url-button" class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0" data-posturl="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch">
+            <span class="fw-bold">Copy link</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="article-copy-icon" role="img" aria-labelledby="abtdna1f99llw24alc5h72mc7bncrxb7" aria-hidden="true" class="crayons-icon mx-2 shrink-0"><title id="abtdna1f99llw24alc5h72mc7bncrxb7">Copy link</title>
+    <path d="M7 6V3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1 1 0 013 21l.003-14c0-.552.45-1 1.007-1H7zm2 0h8v10h2V4H9v2zm-2 5v2h6v-2H7zm0 4v2h6v-2H7z"></path>
+</svg>
+
+          </button>
+          <div id="article-copy-link-announcer" aria-live="polite" class="crayons-notice crayons-notice--success my-2 p-1" hidden="">Copied to Clipboard</div>
+        </div>
+
+        <div class="Desktop-only">
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://twitter.com/intent/tweet?text=%22React%20Tutorial%3A%20A%20Comprehensive%20Guide%20for%20Beginners%20%282023%29%22%20by%20%40ibaslogic%20%23DEVCommunity%20https%3A%2F%2Fdev.to%2Fibaslogic%2Freact-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch">
+            Share to Twitter
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdev.to%2Fibaslogic%2Freact-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch&amp;title=React%20Tutorial%3A%20A%20Comprehensive%20Guide%20for%20Beginners%20%282023%29&amp;summary=Learn%20React%20and%20build%20this%20todos%20project%20with%20this%20course.%20%20%20Do%20you%20want%20to%20learn%20React%20and%20build...&amp;source=DEV%20Community">
+            Share to LinkedIn
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.reddit.com/submit?url=https%3A%2F%2Fdev.to%2Fibaslogic%2Freact-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch&amp;title=React%20Tutorial%3A%20A%20Comprehensive%20Guide%20for%20Beginners%20%282023%29">
+            Share to Reddit
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fdev.to%2Fibaslogic%2Freact-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch&amp;t=React%20Tutorial%3A%20A%20Comprehensive%20Guide%20for%20Beginners%20%282023%29">
+            Share to Hacker News
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdev.to%2Fibaslogic%2Freact-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch">
+            Share to Facebook
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://toot.kytta.dev/?text=https%3A%2F%2Fdev.to%2Fibaslogic%2Freact-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch">
+            Share to Mastodon
+          </a>
+        </div>
+
+        <web-share-wrapper shareurl="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch" sharetitle="React Tutorial: A Comprehensive Guide for Beginners (2023)" sharetext="Learn React and build this todos project with this course.   Do you want to learn React and build..." template="web-share-button">
+          <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#" class="dropdown-link-row crayons-link crayons-link--block">Share Post via...</a>
+        </web-share-wrapper>
+        <template id="web-share-button"></template>
+
+        <a href="https://dev.to/report-abuse" class="crayons-link crayons-link--block">Report Abuse</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </aside>
+
+  <main id="main-content" class="crayons-layout__content grid gap-4">
+    <div class="article-wrapper">
+
+
+      <article class="crayons-card crayons-article mb-4" id="article-show-container" data-article-id="595564" data-article-slug="react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch" data-author-id="334357" data-author-name="Ibas" data-author-username="ibaslogic" data-co-author-ids="" data-path="/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch" data-pin-path="/stories/feed/pinned_article" data-pinned-article-id="1441199" data-published="true" data-scheduled="false">
+        <header class="crayons-article__header" id="main-title">
+            <div class="crayons-article__cover">
+              <img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/kvhafmdxlmubh9fddouf.png" width="1000" height="420" style="background-color:#dddddd;" class="crayons-article__cover__image" alt="Cover image for React Tutorial: A Comprehensive Guide for Beginners (2023)">
+            </div>
+
+          <div class="crayons-article__header__meta">
+            <div class="flex s:items-start flex-col s:flex-row">
+              <div id="action-space" class="crayons-article__actions mb-4 s:mb-0 s:order-last"></div>
+              <div class="flex flex-1 mb-5 items-start">
+                <div class="relative">
+                    <a href="https://dev.to/ibaslogic"><img class="radius-full align-middle" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/02283082-0865-4386-a8ae-c08b51134371.jpg" width="40" height="40" alt="Ibas"></a>
+                </div>
+                <div class="pl-3 flex-1">
+                  <a href="https://dev.to/ibaslogic" class="crayons-link fw-bold">Ibas</a>
+                  <p class="fs-xs color-base-60">
+                      Posted on <time datetime="2021-02-08T12:28:36Z" class="date" title="Monday, February 8, 2021 at 6:28:36 AM">Feb 8, 2021</time>
+
+                      • Updated on <time datetime="2023-02-16T09:41:27Z" class="date-no-year" title="Thursday, February 16, 2023 at 3:41:27 AM">Feb 16</time>
+
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="multiple_reactions_engagement">
+    <span class="reaction_engagement_like">
+      <img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="24" height="24">
+      <span id="reaction_engagement_like_count">53</span>
+    </span>
+    <span class="reaction_engagement_unicorn">
+      <img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="24" height="24">
+      <span id="reaction_engagement_unicorn_count">10</span>
+    </span>
+    <span class="reaction_engagement_exploding_head hidden">
+      <img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="24" height="24">
+      <span id="reaction_engagement_exploding_head_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_raised_hands hidden">
+      <img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="24" height="24">
+      <span id="reaction_engagement_raised_hands_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_fire hidden">
+      <img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="24" height="24">
+      <span id="reaction_engagement_fire_count">&nbsp;</span>
+    </span>
+
+  <span class="placeholder" style="width: 24px; height: 24px;">&nbsp;</span>
+</div>
+
+
+            <h1 class="fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 medium">
+              React Tutorial: A Comprehensive Guide for Beginners (2023)
+            </h1>
+
+              <div class="spec__tags flex flex-wrap">
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(34, 34, 34, 0.10);
+        --tag-prefix: #222222;
+        --tag-bg-hover: rgba(34, 34, 34, 0.10);
+        --tag-prefix-hover: #222222;
+      " href="https://dev.to/t/react"><span class="crayons-tag__prefix">#</span>react</a>
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(247, 223, 30, 0.10);
+        --tag-prefix: #f7df1e;
+        --tag-bg-hover: rgba(247, 223, 30, 0.10);
+        --tag-prefix-hover: #f7df1e;
+      " href="https://dev.to/t/javascript"><span class="crayons-tag__prefix">#</span>javascript</a>
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(86, 39, 101, 0.10);
+        --tag-prefix: #562765;
+        --tag-bg-hover: rgba(86, 39, 101, 0.10);
+        --tag-prefix-hover: #562765;
+      " href="https://dev.to/t/webdev"><span class="crayons-tag__prefix">#</span>webdev</a>
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(254, 255, 165, 0.10);
+        --tag-prefix: #FEFFA5;
+        --tag-bg-hover: rgba(254, 255, 165, 0.10);
+        --tag-prefix-hover: #FEFFA5;
+      " href="https://dev.to/t/tutorial"><span class="crayons-tag__prefix">#</span>tutorial</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="crayons-article__main">
+
+          <div class="crayons-article__body text-styles spec__body" data-article-id="595564" id="article-body">
+            <blockquote>
+<p>Learn React and build <a href="https://react-todos-ibas.vercel.app/">this todos project</a> with this course.</p>
+</blockquote>
+
+<p>Do you want to learn React and build web applications from zero to deployment? Then, this course is for you!</p>
+
+<p>This React tutorial will help beginners understand React concepts and how to implement them to build a performant React application.</p>
+
+<p>Learning React is an excellent choice for a present-day developer. Many startups and corporate firms embraced the technology directly or indirectly through frameworks like Next.js, Gatsby, etc., for building high-performance, scalable, and maintainable web applications.</p>
+
+<h2>
+  <a name="why-you-should-take-this-course" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#why-you-should-take-this-course">
+  </a>
+  Why You Should Take This Course
+</h2>
+
+<p>Below are some of the reasons you should learn React:</p>
+
+<ol>
+<li>You’ll get to build your ideal application within a short period. React has a shorter learning curve compared to many other frameworks/ libraries.</li>
+<li>React has a large and incredible community. You’ll hardly get stuck on a problem without finding a mature solution.</li>
+<li>You can easily transition to building native apps with React native if you want to develop mobile applications.</li>
+<li>React is famous and in demand.</li>
+</ol>
+
+<h2>
+  <a name="prerequisites" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#prerequisites">
+  </a>
+  Prerequisites
+</h2>
+
+<p>To follow this course, we expect you to be familiar with the following topics:</p>
+
+<ul>
+<li>HTML and CSS</li>
+<li>JavaScript fundamentals like the object, arrays, conditionals, and so on</li>
+<li>JavaScript ES6 features like the arrow functions, object destructuring, etc.</li>
+</ul>
+
+<p>In case you are still <a href="https://ibaslogic.com/how-to-learn-javascript-fast/">struggling with JavaScript</a>, do not worry! You can read and code along as we write our React applications. We will use the plainest language possible to explain every code.</p>
+
+<p>At the end of this React tutorial course, we will have the following react projects in our toolbox:</p>
+
+<ol>
+<li>Primary project: a todos application (<a href="https://react-todos-ibas.vercel.app/">see demo</a>)</li>
+<li>Dropdown menu and Modal (<a href="https://bwc7zo.csb.app/">see demo</a>)</li>
+<li>React form (<a href="https://3rs5vr.csb.app/">see demo</a>)</li>
+</ol>
+
+<p>For this course, we aim to cover React to length. So, we have divided the journey into series, with this lesson being the first part.</p>
+
+<p>Now, we can get started!</p>
+
+<h2>
+  <a name="what-is-react" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#what-is-react">
+  </a>
+  What is React?
+</h2>
+
+<p>React (sometimes called React js) is a JavaScript library that originated at Facebook for building interactive user interfaces or UIs. It lets developers create sizeable web apps or complex UIs by integrating a small, isolated code snippet.</p>
+
+<p>React js, in some quarters, is often called a framework because of its behavior and capabilities to build full-fledged applications. However, it is technically a library; it requires more libraries to form complex solutions. For instance, we will need additional libraries to solve standard application requirements like routing, data fetching, etc. On the other hand, JavaScript frameworks like AngularJS, Vue.js, and Ember.js comes bundled with nearly everything to build a complete application.</p>
+
+<h2>
+  <a name="declarative-programming-and-react" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#declarative-programming-and-react">
+  </a>
+  Declarative Programming and React
+</h2>
+
+<p>Coming from vanilla JavaScript, giving an HTML <code>div</code> container like so:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight html"><code><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"root"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>We can render a paragraph in the <code>div</code> by writing the following <a href="https://codepen.io/ibaslogic/pen/YzLpMOM?editors=1010">code in a script file</a>:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">paragraph</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">p</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">paragraphContent</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="dl">"</span><span class="s2">I'm a paragraph!</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">paragraph</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">paragraphContent</span><span class="p">);</span>
+<span class="nx">root</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">paragraph</span><span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>In the code above, we were saying:</p>
+
+<ol>
+<li>Get the <code>div</code> element with root <code>id</code>.</li>
+<li>Create a <code>p</code> element.</li>
+<li>Create a text node for the <code>p</code> element.</li>
+<li>Add the text to the <code>p</code> element</li>
+<li>Finally, add the <code>p</code> element in the <code>div</code>.</li>
+</ol>
+
+<p>When we provide step-by-step instructions to the compiler on how to perform a task (in our case, updating the UI), we use the <strong>imperative programming</strong> style. However, React lets us declaratively describe what we want instead of providing the steps, and it will figure out how to do the task for us.</p>
+
+<p>Since we are only concerned about rendering the <code>p</code> element, all we need to do is to render something like this:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight html"><code><span class="nt">&lt;p&gt;</span>I'm a paragraph!<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>A <strong>declarative approach</strong> will help speed up the development process because we’ll not write code instructions telling the compiler how it should perform tasks.</p>
+
+<h2>
+  <a name="thinking-in-react-component" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#thinking-in-react-component">
+  </a>
+  Thinking in React Component
+</h2>
+
+<p>To build applications with React, we think of the user interface as a bunch of encapsulated, isolated, and reusable code snippets called components.</p>
+
+<blockquote>
+<p>For now, think component as a simple function that we can call with some input and render some output</p>
+</blockquote>
+
+<p>As we can reuse functions, we can also reuse components, merge them and create a complex user interface. Let’s take a look at the UI of our primary project:</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/nkml0ivkucvjfsdjmrzz.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/nkml0ivkucvjfsdjmrzz.png" alt="Image description" loading="lazy" width="854" height="538"></a></p>
+
+<p>To build this application or any other app with React (even as complex as Twitter), we will start by breaking down the user interface into smaller and encapsulated units, as outlined in the image.</p>
+
+<p>Each of these units is a component tasked to do one thing. In the image, we have labeled the components to correspond to the following component names:</p>
+
+<ol>
+<li>
+<strong>TodoApp</strong>: the parent or root component. It holds two direct child components.</li>
+<li>
+<strong>Header</strong>: display the todos heading text.</li>
+<li>
+<strong>TodosLogic</strong>: contains the application logic. It includes two direct child components.</li>
+<li>
+<strong>InputTodo</strong>: will take the user’s input.</li>
+<li>
+<strong>TodosList</strong>: serves as a container for the todos items.</li>
+<li>
+<strong>TodoItem</strong>: renders the individual todos item.</li>
+</ol>
+
+<p>As we can see, we have six components that form the user interface. If any components become complex, we can further decompose them into smaller ones. For instance, we may decompose the <strong>TodoItem</strong> into smaller components: one holding the checkbox, another holding the text of the todo, and the last containing the edit and delete button.</p>
+
+<p>This modularity helps ensure we build an application that is flexible and maintainable.</p>
+
+<blockquote>
+<p>Later in the course, we will add more components when we start with multipage routing. Till then, we will work with the components mentioned above.</p>
+</blockquote>
+
+<h2>
+  <a name="the-react-virtual-dom" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#the-react-virtual-dom">
+  </a>
+  The React Virtual DOM
+</h2>
+
+<p>When we build web applications, we often perform operations that manipulate the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">browser's DOM</a>. For instance, with the DOM APIs, we can add or remove page elements, modify their appearance, and perform actions on the elements.</p>
+
+<p>These DOM operations are lighter and very fast. However, when the state of the UI changes, it triggers a re-rendering which can be expensive!</p>
+
+<p>The following code simulates a re-rendering page with JavaScript:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">update</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">//   JavaScript</span>
+  <span class="kd">const</span> <span class="nx">element2</span> <span class="o">=</span> <span class="s2">`
+    &lt;h3&gt;JavaScript:&lt;/h3&gt;
+    &lt;form&gt;
+      &lt;input type="text"/&gt;
+    &lt;/form&gt;
+    &lt;span&gt;Time: </span><span class="p">${</span><span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleTimeString</span><span class="p">()}</span><span class="s2">&lt;/span&gt;
+  `</span><span class="p">;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#root2</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">element2</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">setInterval</span><span class="p">(</span><span class="nx">update</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>The <code>setInterval()</code> callback lets us trigger a simulated re-render of the user interface after every second. As we can see below, the DOM elements repaint on every update. The text input field also loses its state due to this re-rendering:</p>
+
+<p><div class="ff-container ff-ready ff-active"><button type="button" class="c-btn gif-button fs-s gap-2" aria-label="Pause animation playback" aria-pressed="false"><svg class="crayons-icon gif-play" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM10.622 8.415a.4.4 0 0 0-.622.332v6.506a.4.4 0 0 0 .622.332l4.879-3.252a.4.4 0 0 0 0-.666l-4.88-3.252h.001Z"></path></svg><svg class="crayons-icon gif-pause" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM9 9v6h2V9H9Zm4 0v6h2V9h-2Z"></path></svg>GIF</button>
+<canvas class="ff-canvas ff-canvas-ready" width="487" height="103">
+</canvas><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/fr8grl5n9q0xoc2o18am.gif" alt="Image description" loading="lazy" width="487" height="103" data-animated="true" id="animated-0" class="ff-image"></div></p>
+
+<p>You can see the <a href="https://codepen.io/ibaslogic/pen/GRBEYvQ">demo on Codepen</a>.</p>
+
+<p>The re-rendering behavior in the GIF above calls for optimization. Different JavaScript frameworks have their respective solutions and strategies to optimize re-rendering. For React, the team deploys the concept of virtual DOM.</p>
+
+<h3>
+  <a name="exploring-the-react-virtual-dom" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#exploring-the-react-virtual-dom">
+  </a>
+  Exploring the React Virtual DOM
+</h3>
+
+<p>As the name implies, virtual DOM is a “virtual” representation of the actual DOM. It is an object that React uses to replicate the real DOM to optimize re-rendering efficiently.</p>
+
+<p>React deploys the concept of virtual DOM because it conforms with its declarative approach that lets us write more predictable code. With virtual DOM, we do not need to bother about state transitions. Once the state of the UI is updated, React ensures only the affected node(s) get updated in the actual DOM.</p>
+
+<h3>
+  <a name="how-react-implements-virtual-dom" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#how-react-implements-virtual-dom">
+  </a>
+  How React Implements Virtual DOM
+</h3>
+
+<p>When we render the UI of a React application, a virtual DOM tree representing that UI is created and kept in memory. On the next update, React will create a new virtual DOM tree and compare it to the previous snapshot <a href="https://reactjs.org/docs/reconciliation.html#the-diffing-algorithm">using a diffing algorithm</a> to detect necessary changes. This <a href="https://reactjs.org/docs/reconciliation.html">process is called reconciliation</a>.</p>
+
+<p>After that, React will use a renderer library to update the rendered application. This library will ensure the real DOM only receives and repaints the updated node or nodes.</p>
+
+<h3>
+  <a name="adding-react-to-html-page" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#adding-react-to-html-page">
+  </a>
+  Adding React to HTML Page
+</h3>
+
+<p>Let’s see how React handles re-rendering compared to the vanilla JavaScript example above. We'll add React to a section of an HTML page.</p>
+
+<p>The HTML code below includes a <code>div</code> container element to hold React content and two scripts pointing to the React CDN.<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight html"><code><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>React in HTML<span class="nt">&lt;/h1&gt;</span>
+  <span class="c">&lt;!--  React container  --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"root1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- React scripts --&gt;</span>
+  <span class="nt">&lt;script
+    </span><span class="na">src=</span><span class="s">"https://unpkg.com/react@18/umd/react.development.js"</span>
+    <span class="na">crossorigin</span>
+  <span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script
+    </span><span class="na">src=</span><span class="s">"https://unpkg.com/react-dom@18/umd/react-dom.development.js"</span>
+    <span class="na">crossorigin</span>
+  <span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="c">&lt;!-- load script file. --&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Next, in a script file, we’ll add the following React js code:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#root1</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nx">rootElement</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">update</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">element1</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+    <span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">,</span>
+    <span class="kc">null</span><span class="p">,</span>
+    <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+      <span class="dl">'</span><span class="s1">form</span><span class="dl">'</span><span class="p">,</span>
+      <span class="kc">null</span><span class="p">,</span>
+      <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text</span><span class="dl">'</span><span class="p">,</span>
+      <span class="p">})</span>
+    <span class="p">),</span>
+    <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+      <span class="dl">'</span><span class="s1">span</span><span class="dl">'</span><span class="p">,</span>
+      <span class="kc">null</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">Time: </span><span class="dl">'</span><span class="p">,</span>
+      <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleTimeString</span><span class="p">()</span>
+    <span class="p">)</span>
+  <span class="p">);</span>
+  <span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">element1</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">setInterval</span><span class="p">(</span><span class="nx">update</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Let’s ignore most parts of the <code>update</code> function; we will discuss it in a moment. In the other parts of the code, we accessed a DOM element that we included in the HTML file and then created a React application with it:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#root1</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nx">rootElement</span><span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>React uses the <code>ReactDOM</code> to ensure the real DOM only receives and repaints what is necessary. We then rendered the content assigned to <code>element1</code> inside the DOM:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">element1</span><span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>The content that we rendered is called <strong>React elements</strong>. They describe what we see on the screen. If we log the React element in the browser console:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">element1</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+ <span class="c1">// ...</span>
+<span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element1</span><span class="p">)</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>We will get an object representing the virtual DOM:</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/ce4yt3z9ojtfe10qu2kl.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/ce4yt3z9ojtfe10qu2kl.png" alt="Image description" loading="lazy" width="774" height="241"></a></p>
+
+<p>React creates this object whenever we render the React elements and keep it somewhere in the memory. React will also create a new virtual DOM tree if changes occur in the render and compare it with the previous snapshot to figure out what has changed.</p>
+
+<p>React can do this quickly because the virtual DOM (being an object representing the UI) is very cheap to create and doesn't draw the user interface, unlike the actual DOM. After React finalizes the necessary update, it ensures the real DOM receives and repaints the updated node.</p>
+
+<p>The GIF below demonstrates the behavior:</p>
+
+<p><div class="ff-container ff-ready ff-active"><button type="button" class="c-btn gif-button fs-s gap-2" aria-label="Pause animation playback" aria-pressed="false"><svg class="crayons-icon gif-play" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM10.622 8.415a.4.4 0 0 0-.622.332v6.506a.4.4 0 0 0 .622.332l4.879-3.252a.4.4 0 0 0 0-.666l-4.88-3.252h.001Z"></path></svg><svg class="crayons-icon gif-pause" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM9 9v6h2V9H9Zm4 0v6h2V9h-2Z"></path></svg>GIF</button>
+<canvas class="ff-canvas ff-canvas-ready" width="514" height="178">
+</canvas><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/8x6t07xq4yl7uq3b14rf.gif" alt="Image description" loading="lazy" width="514" height="178" data-animated="true" id="animated-1" class="ff-image"></div></p>
+
+<p>As we can see, only the rendered time whose state changes gets repainted on every re-render. Likewise, we are not losing the input value when a state change occurs in the UI. See the <a href="https://codepen.io/ibaslogic/pen/bGazrzE">code and demo on Codepen</a>.</p>
+
+<p>You can read more on Virtual DOM in this article.</p>
+
+<h2>
+  <a name="react-element-and-jsx" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#react-element-and-jsx">
+  </a>
+  React Element and JSX
+</h2>
+
+<p>Earlier, we saw how we rendered React elements to describe the user interface. With that React syntax, we can complete a React application. However, React provides a more straightforward way to describe the user interface.</p>
+
+<p>If we take a look at the HTML DOM structure in the GIF above, we have something like this:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight html"><code><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Time: ##:##:## PM<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>If we copy and paste the code in <a href="https://babeljs.io/repl">a Babel repl editor</a>, we will get the equivalent React elements that we used earlier:</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/0ohl0oyyyyohl6j5kajq.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/0ohl0oyyyyohl6j5kajq.png" alt="Image description" loading="lazy" width="880" height="153"></a></p>
+
+<p>Using Babel, we can transform the code on the editor's left to the one React understands on the right. Since the code on the left looks more straightforward and familiar, React allows us to build the UI using that syntax instead of writing the complex React elements.</p>
+
+<p>If we update the React code example in the previous section with the familiar syntax, we will have the following:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight jsx"><code><span class="kd">let</span> <span class="nx">element1</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="p">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Time: <span class="si">{</span><span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleTimeString</span><span class="p">()</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>And the application would also work.</p>
+
+<p>Now, why are we replacing JavaScript/React code with HTML? You may ask! Well, in React, the code above is not HTML but JSX.</p>
+
+<h3>
+  <a name="what-is-jsx" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#what-is-jsx">
+  </a>
+  What is JSX?
+</h3>
+
+<p>Writing JavaScript/React code to describe the UI is not simple, as we’ve seen above. This makes the React author create what looks like a JavaScript version of HTML called JSX or JavaScript XML.</p>
+
+<p>JSX is a syntax extension for JavaScript that provides an easier way to describe the user interface. Under the hood, the JSX is translated to a regular JavaScript version at runtime since browsers cannot read it. Throughout the React js tutorial series, we will use JSX to describe the project's UI.</p>
+
+<p><strong>A few notes about the JSX:</strong></p>
+
+<ol>
+<li>We can write a valid JavaScript expression inside the JSX via the curly braces, <code>{}</code>.</li>
+<li>Element’s attributes and event handlers are always in camel cases. A few exceptions are <code>aria-*</code> and <code>data-*</code> attributes which must be in lowercase.</li>
+</ol>
+
+<h2>
+  <a name="setting-up-the-working-environment" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#setting-up-the-working-environment">
+  </a>
+  Setting up the Working Environment
+</h2>
+
+<p>We’ve covered how to quickly interact with React by writing React code in an HTML file. In this section, we will prepare our development environment for production-worthy applications. We will set up development environments using a toolchain like <strong>create-react-app</strong> CLI, build tools like <strong>Vite</strong>, and also cover how to set up projects from scratch.</p>
+
+<h3>
+  <a name="the-raw-createreactapp-endraw-cli" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#the-raw-createreactapp-endraw-cli">
+  </a>
+  The <code>create-react-app</code> CLI
+</h3>
+
+<p>The <code>create-react-app</code> CLI comes bundled with what an average developer would need to bootstrap a React application. It will include React and other third-party libraries we will need, including Webpack, and Babel, which lets us use JSX and modern JavaScript features.</p>
+
+<p>To install the CLI, we must have Node installed on our machine to access the NPM (Node Package Manager) tool.</p>
+
+<blockquote>
+<p>Run <code>node -v</code> and <code>npm -v</code> in the terminal to see if you have node and npm installed, respectively. Ensure you have node&gt;=14.0.0 and npm&gt;=5.6</p>
+</blockquote>
+
+<p>If you don’t have them installed, <a href="https://nodejs.org/">head to Node</a> to download and install the latest stable version.</p>
+
+<p>Next, <code>cd</code> into a directory to save the project. For instance, <code>cd Desktop</code> and run:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npx create-react-app react-todo-app
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>This command creates a <strong>react-todo-app</strong> project folder and includes all the starter files. Let's open the folder with a code editor:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code><span class="nb">cd </span>react-todo-app
+code <span class="nb">.</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<blockquote>
+<p>For this project, we are using Visual Studio Code. You can use your favorite code editor.</p>
+</blockquote>
+
+<p>We will see a file structure that looks like so:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>react-todo-app
+    ├── node_modules
+    ├── public
+    │    ├── favicon.ico
+    │    ├── index.html
+    │    ├── logo192.png
+    │    ├── logo512.png
+    │    ├── manifest.json
+    │    └── robots.txt
+    ├── src
+    │    ├── App.css
+    │    ├── App.js
+    │    ├── App.test.js
+    │    ├── index.css
+    │    ├── index.js
+    │    ├── logo.svg
+    │    ├── reportWebVitals.js
+    │    └── setupTest.js
+    ├── .gitignore
+    ├── package-lock.json
+    ├── package.json
+    └── README.md
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<h3>
+  <a name="inside-the-project-folder" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#inside-the-project-folder">
+  </a>
+  Inside the Project Folder
+</h3>
+
+<p>The <code>node_modules</code> contains the files of the project’s dependencies. This includes <code>react</code> and other third-party libraries. The <code>public</code> folder contains the public asset of our application; it is where the static files reside. The <code>index.html</code> in the <code>public</code> folder holds a <code>div</code> container element where our application will appear.</p>
+
+<p>The <code>src</code> folder contains the working files. The <code>index.js</code> file in the <code>src</code> directory will serve as the entry point to our application.</p>
+
+<p>Let’s ignore the other files in the <code>src</code> folder; we will write everything from scratch. The <code>.gitignore</code> file lists the directories and files to ignore when we commit to a repository. The <code>ReadME.md</code> file is intended to provide instructions about the project. Lastly, <code>package.json</code> contains meta-information about the project. It also includes a list of project dependencies and helpful script commands.</p>
+
+<h3>
+  <a name="running-the-development-server" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#running-the-development-server">
+  </a>
+  Running the Development Server
+</h3>
+
+<p>If we open the <code>package.json</code> file and look for the <code>scripts</code> property, we will see a list of script commands:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight json"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"react-scripts start"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"react-scripts build"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"react-scripts test"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"eject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"react-scripts eject"</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>We use the <code>npm run ####</code> command to run any scripts, where <code>####</code> is the script name. We can ignore the <code>run</code> in the command for <code>start</code> and <code>test</code> scripts.</p>
+
+<p>To start the development server, we will run the following:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npm run start
+<span class="c">#or</span>
+npm start
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>The application should launch automatically in the browser window on port <strong>3000</strong>. If nothing happens, visit <code>localhost:3000</code> in the browser address bar to see the default app.</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/mvgb0c3pkojov63hrrje.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/mvgb0c3pkojov63hrrje.png" alt="Image description" loading="lazy" width="800" height="440"></a></p>
+
+<p>We can stop the development server with <code>Ctrl + c</code>.</p>
+
+<h3>
+  <a name="working-environment-with-vite" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#working-environment-with-vite">
+  </a>
+  Working Environment With Vite
+</h3>
+
+<p>Vite is a build tool that we can use to set up React projects. It provides faster installation and instant server start times compared to the <code>create-react-app</code> CLI. This makes it a go-to solution for most developers when creating a React project. See the npm trends against <code>create-react-app</code>:</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/dvgpd0xorokfcybbv4vg.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/dvgpd0xorokfcybbv4vg.png" alt="Image description" loading="lazy" width="880" height="656"></a></p>
+
+<p>Let’s set it up.</p>
+
+<p>From the terminal, let’s run the following command and follow the prompt:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npm create vite@latest
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>We’ll enter a project name (for instance, <code>react-todo-app</code>) and then select <strong>React</strong> from the list of frameworks:</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/1ahapd87b86wwubsitku.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/1ahapd87b86wwubsitku.png" alt="Image description" loading="lazy" width="600" height="191"></a></p>
+
+<p>We’ll be prompted to select a variant between <strong>JavaScript</strong> and <strong>TypeScript</strong>. We’ll choose <strong>JavaScript</strong>.</p>
+
+<p>Once that is done, let’s <code>cd</code> into the project folder and run <code>npm install</code> to install the necessary dependencies in the local <code>node_modules</code> folder.<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code><span class="nb">cd </span>react-todo-app
+npm <span class="nb">install</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Let’s open the project with a code editor:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>code <span class="nb">.</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Then, open the <code>package.json</code> file to see the following scripts:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight json"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vite"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vite build"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"preview"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vite preview"</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>As we learned earlier, we can start the development server (in this case) by running <code>npm run dev</code>. The application should start automatically in the browser window on an available port. If nothing happens, check the terminal and visit the URL printed in it:</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/ffasivgortg4x2thhlvj.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/ffasivgortg4x2thhlvj.png" alt="Image description" loading="lazy" width="800" height="583"></a></p>
+
+<h3>
+  <a name="create-react-app-vs-vite-comparing-the-folder-structure" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#create-react-app-vs-vite-comparing-the-folder-structure">
+  </a>
+  Create React App vs. Vite: Comparing the Folder Structure
+</h3>
+
+<p>Like the CRA, the <code>src</code> folder inside a Vite project also contains the working files. However, while the CRA uses the <code>index.js</code> file as the entry point, Vite uses <code>main.jsx</code>.</p>
+
+<p>On the file extension, CRA is lenient as it allows both <code>.js</code> and <code>.jsx</code> files to write React JSX code. But Vite requires <code>.jsx</code> files by default for JSX code. In this course, we will use Vite to create our projects. However, you can follow along using your preferred solution.</p>
+
+
+
+<h3>
+  <a name="setting-up-react-environment-from-scratch" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#setting-up-react-environment-from-scratch">
+  </a>
+  Setting up React Environment From Scratch
+</h3>
+
+<p>Building React applications without using tools like Vite and CRA requires extra effort. We will install and configure a couple of libraries that the tools installed for us behind the scene.</p>
+
+<p>Though most of the time, we'll start a React project using either a create-react-app CLI, Vite, or some other solutions. However, sometimes our project might require a minimal setup, of which some of the available tools might include things we probably don’t need.</p>
+
+<p>The <code>create-react-app</code>, for instance, adds a lot of abstraction and makes it difficult to add a custom build configuration without ejecting the application. So, for this reason, it is wise to know how to set up a project for flexibility. Let’s do that!</p>
+
+<p><strong>Creating a Folder and Initialise a Project</strong></p>
+
+<p>Create a project folder, <code>cd</code> into it, and open it with the code editor:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code><span class="nb">mkdir </span>react-project-no-cra
+<span class="nb">cd </span>react-project-no-cra
+code <span class="nb">.</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>After that, run <code>npm init -y</code> to generate a <code>package.json</code> file. This lets us add scripts and keep track of the project dependencies.</p>
+
+<p><strong>Installing Dependencies</strong></p>
+
+<p>We’ll start by installing two fundamental React dependencies: <code>react</code>, which is the actual library, and <code>react-dom</code>, which lets us use React with the DOM.<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npm <span class="nb">install </span>react react-dom
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Next, we need a bundler like Webpack to bundle our codes and their dependencies and a compiler like Babel to transform our code to what all browsers understand. We will install both packages and their related dependencies as dev dependencies.</p>
+
+<p>Starting with Webpack, let’s run this command:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npm <span class="nb">install</span> <span class="nt">--save-dev</span> webpack webpack-cli webpack-dev-server
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Then, let’s add babel also:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npm <span class="nb">install</span> <span class="nt">--save-dev</span> @babel/core babel-loader @babel/preset-react @babel/preset-env
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Next, we will install a plugin to assist with adding Webpack bundles file to HTML file:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npm <span class="nb">install</span> <span class="nt">--save-dev</span> html-webpack-plugin
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p><strong>Configuring Webpack</strong></p>
+
+<p>Since the goals in development differ from that of production, Webpack lets us create configuration files that target the different environments and another file to maintain a common configuration. That means we will create three files in the project root: <code>webpack.common.js</code>, <code>webpack.dev.js</code>, and <code>webpack.prod.js</code>.</p>
+
+<p>In the <code>webpack.common.js</code>, let’s add the common configuration:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">HTMLWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">html-webpack-plugin</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/index.js</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">dist</span><span class="dl">'</span><span class="p">),</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bundle.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">clean</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">HTMLWebpackPlugin</span><span class="p">({</span>
+      <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/index.html</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">}),</span>
+  <span class="p">],</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">js|jsx</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+        <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[{</span> <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">babel-loader</span><span class="dl">'</span> <span class="p">}],</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>To include the common configuration in the environment-specific configurations (i.e., development and production), we will install a util called <code>webpack-merge</code>.<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npm <span class="nb">install</span> <span class="nt">--save-dev</span> webpack-merge
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Now open the <code>webpack.dev.js</code> file, and add dev-specific configuration:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">merge</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack-merge</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">common</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./webpack.common.js</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">common</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">development</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">devtool</span><span class="p">:</span> <span class="dl">'</span><span class="s1">inline-source-map</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">devServer</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">static</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./dist</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">port</span><span class="p">:</span> <span class="mi">3001</span><span class="p">,</span>
+    <span class="na">open</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">hot</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">compress</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Then, add the following in the <code>webpack.prod.js</code> file:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">merge</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack-merge</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">common</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./webpack.common.js</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">common</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">production</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">devtool</span><span class="p">:</span> <span class="dl">'</span><span class="s1">source-map</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Save all files.</p>
+
+<p>In the <code>module.exports</code> object of the <code>webpack.common.js</code> file, we specified an <code>entry</code> option to tell Webpack where to look to start building the bundle. So let’s create a <code>src/index.js</code> file in our project root; we will add code to the file later. The <code>output</code> object is where we tell Webpack to output the bundled files.</p>
+
+<p>The <code>HTMLWebpackPlugin</code> lets us use a custom HTML template where it will inject all necessary bundled files for us. Let’s create a <code>src/index.html</code> and add the following:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight html"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span>
+      <span class="na">name=</span><span class="s">"viewport"</span>
+      <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span>
+    <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>React application<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"root"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>The focus here is the root <code>div</code> container. Similar to how we write React in HTML earlier, we will access this DOM element to display our application.</p>
+
+<p>The <code>module.rules</code> in the config file let us set rules for modules. There, we tell Webpack to use <code>babel-loader</code> to transpile JavaScript files. In addition, we need to provide further instructions to the Babel loader to perform the task.</p>
+
+<p>Let’s create a babel config file called <code>.babelrc</code> in the project root and add the following code:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">presets</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="dl">"</span><span class="s2">@babel/preset-env</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">[</span><span class="dl">"</span><span class="s2">@babel/preset-react</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">runtime</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">automatic</span><span class="dl">"</span>
+    <span class="p">}]</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Now, Webpack is configured to run a React application.</p>
+
+<p><strong>Defining Scripts</strong></p>
+
+<p>Next, we will modify our scripts in the <code>package.json</code> file to use the config files. Let’s update the scripts so we have the following:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight json"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack serve --config webpack.dev.js"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack --config webpack.prod.js"</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Save the file.</p>
+
+<p><strong>Rendering React Code</strong></p>
+
+<p>Before we run the scripts, let’s open the <code>src/index.js</code> file and add the following code:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom/client</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">rootElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nx">rootElement</span><span class="p">);</span>
+<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="k">from</span> <span class="nx">React</span> <span class="nx">application</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="se">)</span><span class="err">;
+</span></code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Similar to how we rendered React elements in the HTML file earlier, the above code renders a simple JSX element in the root container. Here, we imported <code>React</code> and <code>ReactDOM</code> instead of loading them from their respective CDN.</p>
+
+<blockquote>
+<p>The <code>import</code> statement is an ES6 feature that allows us to bring in <code>React</code> and <code>ReactDOM</code> objects from their respective modules.</p>
+</blockquote>
+
+<p>If we save all files and run <code>npm start</code>, the project should start automatically in the browser window on the specified port, <strong>3001</strong>.</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/zaq8i01mrel0k2sfa0w8.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/zaq8i01mrel0k2sfa0w8.png" alt="Image description" loading="lazy" width="800" height="392"></a></p>
+
+<p>If we try the <code>npm run build</code> command, a production-ready <code>dist</code> folder will be generated in the project root.</p>
+
+<p><strong>Handling Other Files</strong></p>
+
+<p>In our <code>module.rules</code>, we only added rules for JavaScript/JSX files. Let’s tell Webpack how to handle other file types.</p>
+
+<p><strong><em>Asset files:</em></strong></p>
+
+<p>If we add an <a href="https://github.com/Ibaslogic/react-setup-scratch/blob/main/src/images/react.svg">src/images/react.svg</a> file, and then import it to render an image so the <code>src/index.js</code> look like so:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight jsx"><code><span class="c1">// ...</span>
+<span class="k">import</span> <span class="nx">reactLogo</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./images/react.svg</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello from React application<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">reactLogo</span><span class="si">}</span> <span class="na">className</span><span class="p">=</span><span class="s">"logo react"</span> <span class="na">alt</span><span class="p">=</span><span class="s">"React logo"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>We will get an error if we start the server.</p>
+
+<p>We need to update the <code>module.rules</code> in the <code>webpack.common.js</code> to include the asset resource type:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="nx">module</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">rules</span><span class="p">:</span> <span class="p">[</span>
+    <span class="c1">// ...</span>
+    <span class="p">{</span>
+      <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">png|svg|jpg|gif</span><span class="se">)</span><span class="sr">$/i</span><span class="p">,</span>
+      <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">asset/resource</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">},</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>And then, update the <code>output</code> object to include <code>assetModuleFilename</code>:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="nx">output</span><span class="p">:</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+  <span class="nl">assetModuleFilename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">images/</span><span class="se">\</span><span class="s1">[name</span><span class="se">\</span><span class="s1">][ext][query]</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">},</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p><strong><em>CSS files:</em></strong></p>
+
+<p>If we add a <code>src/styles/app.css</code> file and include a CSS rule like so:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight css"><code><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#ff2778</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>After that, import the CSS file in the <code>src/index.js</code> file:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="k">import</span> <span class="dl">'</span><span class="s1">./styles/app.css</span><span class="dl">'</span><span class="p">;</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>We will get an error if we run the dev server. Here also, we need to inform Webpack of the type of loaders to use to transform CSS files. So let’s install the following:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code>npm <span class="nb">install</span> <span class="nt">--save-dev</span> mini-css-extract-plugin css-loader
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>In the <code>webpack.common.js</code> file, import <code>MiniCssExtractPlugin</code> at the top like so:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">MiniCssExtractPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">mini-css-extract-plugin</span><span class="dl">'</span><span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>After that, add the plugin in the <code>plugins</code> array:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="nx">plugins</span><span class="p">:</span> <span class="p">[</span>
+  <span class="c1">// ...</span>
+  <span class="k">new</span> <span class="nx">MiniCssExtractPlugin</span><span class="p">({</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">styles.css</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">}),</span>
+<span class="p">],</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>Then, update the <code>module.rules</code> to use the loaders like so:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="nx">module</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">rules</span><span class="p">:</span> <span class="p">[</span>
+    <span class="c1">// ...</span>
+    <span class="p">{</span>
+      <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+      <span class="na">use</span><span class="p">:</span> <span class="p">[</span><span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span> <span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span><span class="p">],</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">},</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>If we save all files and test our work, it should work!</p>
+
+<p><a href="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/gshldt2ym8odns0umqk3.png" class="article-body-image-wrapper"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/gshldt2ym8odns0umqk3.png" alt="Image description" loading="lazy" width="800" height="425"></a></p>
+
+<p>Great job!</p>
+
+<p>As we can see, setting up the development environment from scratch can be overwhelming. Though, this should be a one-time setup you can reuse for other React projects. You can find the <a href="https://github.com/Ibaslogic/react-setup-scratch">source code on this GitHub repository</a>.</p>
+
+<blockquote>
+<p>Again, often, we will use either the <code>create-react-app</code> command or Vite or a React-based framework to kickstart a new React project.</p>
+</blockquote>
+
+<p>That is it for the first lesson.</p>
+
+<p>We’ve laid the foundations for building a fantastic React application and becoming a React developer. Hopefully, you’ve learned something new about React. It is worth saying that this is only a teaser of what we covered in the React series.</p>
+
+<p>In the next part, you will learn about React components and data models and start implementing them to build React projects.</p>
+
+<p>If you enjoy reading this post, take a moment to <a href="https://twitter.com/ibaslogic">follow Ibas on Twitter</a>, so you can catch all web development tips and tricks.</p>
+
+<h2>
+  <a name="next-part" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#next-part">
+  </a>
+  <a href="https://ibaslogic.com/react-components-data-model/">Next part</a>.
+</h2>
+
+
+          </div>
+
+        </div>
+          <section id="comments" data-follow-button-container="true" data-updated-at="2023-04-27 17:22:33 UTC" class="text-padding mb-4 border-t-1 border-0 border-solid border-base-10">
+      <header class="relative flex justify-between items-center mb-6">
+        <div class="flex items-center">
+          <h2 class="crayons-subtitle-1">
+            Top comments <span class="js-comments-count" data-comments-count="0">(0)</span>
+          </h2>
+          <button class="c-btn c-btn--ghost crayons-btn--icon-left" id="toggle-comments-sort-dropdown" aria-controls="comments-sort-dropdown-container" aria-expanded="false" aria-label="Sort comments" aria-haspopup="true" data-initialized="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="mt-2"><title>Crown</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+          </button>
+        </div>
+
+        <nav class="crayons-dropdown p-4" id="comments-sort-dropdown-container" aria-labelledby="comments-sort-title">
+            <h3 id="comments-sort-title" class="mb-3">Sort discussion: </h3>
+            <ul class="comments-sort-dropdown__list">
+              <li class="comment-sort-option">
+  <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch?comments_sort=top#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="top-description-text" aria-current="page">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="athroeaxr57s74fc8k985g87vmwff56p" aria-hidden="true" class="crayons-icon"><title id="athroeaxr57s74fc8k985g87vmwff56p">Selected Sort Option</title>
+    <path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414 4.95 4.95z"></path>
+</svg>
+
+       Top
+    </div>
+     <div id="top-description-text" class="crayons-field__description">
+      Most upvoted and relevant comments will be first
+    </div>
+  </a>
+</li>
+
+              <li class="comment-sort-option">
+  <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch?comments_sort=latest#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="latest-description-text" aria-current="">
+    <div>
+      
+       Latest
+    </div>
+     <div id="latest-description-text" class="crayons-field__description">
+      Most recent comments will be first
+    </div>
+  </a>
+</li>
+
+              <li class="comment-sort-option">
+  <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch?comments_sort=oldest#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="oldest-description-text" aria-current="">
+    <div>
+      
+       Oldest
+    </div>
+     <div id="oldest-description-text" class="crayons-field__description">
+      The oldest comments will be first
+    </div>
+  </a>
+</li>
+
+            </ul>
+        </nav>
+
+        <div id="comment-subscription" class="print-hidden"><div class="static"><div role="group" aria-label="Comment subscription options" class="crayons-btn-group"><button class="crayons-btn crayons-btn--outlined" type="button" data-tracking-name="comment_subscription_toggle">Subscribe</button></div></div>
+          
+        </div>
+      </header>
+
+      <div id="comments-container" data-testid="comments-container" data-commentable-id="595564" data-commentable-type="Article" data-has-recent-comment-activity="false">
+
+          <div id="response-templates-data" class="hidden"></div>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~validateFileInputs-22a7b85ea38f24f4e6ca.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/0-9327fbce804fdf0ee02e.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/1-8e0fdc1cb9064484613e.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/validateFileInputs-6af8014c781e9c77f655.chunk.js.download" defer="defer"></script>
+
+
+<form class="comment-form print-hidden" id="new_comment" action="https://dev.to/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off">
+
+  <input type="hidden" name="authenticity_token" value="NOTHING" id="new_comment_authenticity_token">
+
+    <input value="595564" autocomplete="off" type="hidden" name="comment[commentable_id]" id="comment_commentable_id">
+    <input value="Article" autocomplete="off" type="hidden" name="comment[commentable_type]" id="comment_commentable_type">
+    
+
+  <span class="crayons-avatar m:crayons-avatar--l mr-2 shrink-0">
+    <img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/devlogo-pwa-512.png" width="32" height="32" alt="pic" class="crayons-avatar__image overflow-hidden" id="comment-primary-user-profile--avatar" loading="lazy">
+  </span>
+  <div class="comment-form__inner">
+    <div class="comment-form__field" data-tracking-name="comment_form_textfield">
+      <textarea placeholder="Add to the discussion" onfocus="handleFocus(event)" onkeyup="handleKeyUp(event)" onkeydown="handleKeyDown(event)" oninput="handleChange(event)" id="text-area" required="required" class="crayons-textfield comment-textarea crayons-textfield--ghost" aria-label="Add a comment to the discussion" name="comment[body_markdown]"></textarea>
+
+    </div>
+
+    <div class="response-templates-container crayons-card crayons-card--secondary p-4 mb-4 comment-form__templates fs-base hidden">
+      <header class="mb-3">
+        <button type="button" class="crayons-btn personal-template-button active" data-target-type="personal" data-form-id="new_comment">Personal</button>
+        <button type="button" class="crayons-btn moderator-template-button hidden" data-target-type="moderator" data-form-id="new_comment">Trusted User</button>
+      </header>
+
+      <img class="loading-img hidden" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg" alt="loading" loading="lazy">
+
+      <div class="personal-responses-container">
+      </div>
+      <div class="moderator-responses-container hidden">
+      </div>
+
+      <a target="_blank" rel="noopener nofollow" href="https://dev.to/settings/response-templates">
+        Create template
+      </a>
+      <p>Templates let you quickly answer FAQs or store snippets for re-use.</p>
+    </div>
+
+    <div class="comment-form__preview text-styles text-styles--secondary" id="preview-div"></div>
+
+    <div class="comment-form__buttons mb-4">
+      <button type="submit" class="crayons-btn mr-2 js-btn-enable" onclick="validateField(event)" data-tracking-name="comment_submit_button" disabled="">Submit</button>
+      <button type="button" class="preview-toggle crayons-btn crayons-btn--secondary comment-action-preview js-btn-enable mr-2" data-tracking-name="comment_preview_button" disabled="">Preview</button>
+      <a href="https://dev.to/404.html" class="dismiss-edit-comment crayons-btn crayons-btn--ghost js-btn-dismiss hidden">Dismiss</a>
+    </div>
+  </div>
+
+  <div class="code-of-conduct" id="toggle-code-of-conduct-checkbox"></div>
+</form>
+
+
+        <div class="comments" id="comment-trees-container">
+        </div>
+      </div>
+
+      <div class="align-center">
+
+
+  <nav class="fs-s align-center block" aria-label="Conduct controls">
+  <a href="https://dev.to/code-of-conduct" class="crayons-link crayons-link--secondary">Code of Conduct</a>
+  <span class="opacity-25 px-2" role="presentation">•</span>
+  <a href="https://dev.to/report-abuse" class="crayons-link crayons-link--secondary">Report abuse</a>
+</nav>
+
+</div>
+
+  </section>
+  <div id="hide-comments-modal" class="hidden">
+  <form id="hide-comments-modal__form" class="hide-comments-modal__form" data-type="json" action="https://dev.to/comments/hide" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="X_7mXtjyhcmhoINxYtr5ummeNjkHUzGGvJSnyDmG7kzjwaEjzfrot0NSgNrRLSTsIXX8oCkH-pdo0z1D_9-sJQ" autocomplete="off">
+    <div class="hide-comments-modal__content">
+      <p class="pb-2">
+        Are you sure you want to hide this comment? It will become hidden in your post, but will still be visible via the comment's <a id="hide-comments-modal__comment-permalink" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#">permalink</a>.
+      </p>
+      <label class="crayons-field crayons-field--checkbox my-2">
+        <input name="hide_children" type="hidden" value="0" autocomplete="off"><input class="hide_children crayons-checkbox" type="checkbox" value="1" name="hide_children" id="hide_children">
+        <p class="crayons-field__label">Hide child comments as well</p>
+      </label>
+      <p class="pb-4 pt-2">
+        <button type="submit" class="crayons-btn">
+          Confirm
+        </button>
+      </p>
+    </div>
+</form>  <p class="fs-s color-base-60">For further actions, you may consider blocking this person and/or <a id="hide-comments-modal__report-link" href="https://dev.to/report-abuse">reporting abuse</a></p>
+</div>
+
+
+
+      </article>
+
+      <div class="pb-4 crayons-layout__comments-display-ad">
+        <div class="js-display-ad-container pb-4 crayons-layout__comments-display-ad" data-async-url="/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch/display_ads/post_comments"><div>        <div class="crayons-card crayons-card--secondary crayons-sponsorship" data-display-unit="" data-id="1557" data-category-click="click" data-category-impression="impression" data-context-type="article" data-type-of="in_house">
+    <div class="crayons-sponsorship__header relative">
+    <div class="crayons-sponsorship__title">DEV Community</div>
+
+  <button id="sponsorship-dropdown-trigger-1557" aria-controls="sponsorship-dropdown-1557" aria-expanded="false" aria-haspopup="true" class="dropBtn crayons-sponsorship__dropdown crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon" aria-label="Toggle dropdown menu" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ajhcgidrz9incvnoi0lrm3xlzhibvzqc" class="crayons-icon pointer-events-none"><title id="ajhcgidrz9incvnoi0lrm3xlzhibvzqc">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+  </button>
+
+  <div id="sponsorship-dropdown-1557" class="crayons-dropdown sponsorship-dropdown right-0">
+    <ul class="list-none m-0">
+        <li>
+          <a class="crayons-link crayons-link--block" href="https://dev.to/billboards">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
+</svg>
+
+            What's a billboard?
+          </a>
+        </li>
+      <li>
+        <a class="crayons-link crayons-link--block" href="https://dev.to/settings/customization#sponsors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M3.34 16.9999C2.91727 16.2689 2.58866 15.4874 2.362 14.6739C2.85531 14.423 3.26959 14.0406 3.55903 13.5688C3.84846 13.0971 4.00176 12.5545 4.00197 12.0011C4.00218 11.4476 3.84928 10.9049 3.5602 10.4329C3.27112 9.961 2.85712 9.57821 2.364 9.32694C2.81604 7.69243 3.67673 6.1999 4.865 4.98994C5.32909 5.29167 5.86762 5.45911 6.42098 5.47373C6.97434 5.48834 7.52095 5.34958 8.00033 5.07278C8.47971 4.79598 8.87315 4.39194 9.13713 3.90539C9.4011 3.41883 9.52531 2.86872 9.496 2.31594C11.1381 1.89157 12.8612 1.89226 14.503 2.31795C14.474 2.87071 14.5984 3.42073 14.8626 3.90715C15.1268 4.39357 15.5204 4.79742 15.9998 5.07401C16.4793 5.35059 17.0259 5.48913 17.5793 5.4743C18.1326 5.45946 18.671 5.29183 19.135 4.98994C19.714 5.57994 20.228 6.25095 20.66 6.99995C21.093 7.74895 21.417 8.52995 21.638 9.32595C21.1447 9.57685 20.7304 9.95932 20.441 10.4311C20.1515 10.9028 19.9982 11.4454 19.998 11.9988C19.9978 12.5523 20.1507 13.095 20.4398 13.5669C20.7289 14.0389 21.1429 14.4217 21.636 14.6729C21.184 16.3075 20.3233 17.8 19.135 19.0099C18.6709 18.7082 18.1324 18.5408 17.579 18.5262C17.0257 18.5115 16.479 18.6503 15.9997 18.9271C15.5203 19.2039 15.1268 19.6079 14.8629 20.0945C14.5989 20.5811 14.4747 21.1312 14.504 21.6839C12.8619 22.1083 11.1388 22.1076 9.497 21.6819C9.52605 21.1292 9.4016 20.5792 9.13742 20.0927C8.87324 19.6063 8.47964 19.2025 8.00017 18.9259C7.5207 18.6493 6.97405 18.5108 6.42073 18.5256C5.8674 18.5404 5.32896 18.7081 4.865 19.0099C4.27399 18.4069 3.76159 17.7315 3.34 16.9999ZM9 17.1959C10.0656 17.8106 10.8668 18.797 11.25 19.9659C11.749 20.0129 12.25 20.0139 12.749 19.9669C13.1324 18.7978 13.934 17.8114 15 17.1969C16.0652 16.5806 17.3205 16.3794 18.525 16.6319C18.815 16.2239 19.065 15.7889 19.273 15.3339C18.4524 14.4174 17.9991 13.2302 18 11.9999C18 10.7399 18.47 9.56295 19.273 8.66595C19.0635 8.21109 18.8125 7.77658 18.523 7.36795C17.3193 7.62025 16.0648 7.41942 15 6.80395C13.9344 6.18932 13.1332 5.20293 12.75 4.03394C12.251 3.98694 11.75 3.98594 11.251 4.03294C10.8676 5.20209 10.066 6.1885 9 6.80295C7.93478 7.41926 6.67948 7.62046 5.475 7.36795C5.18556 7.77623 4.93513 8.21081 4.727 8.66595C5.54757 9.5825 6.00088 10.7697 6 11.9999C6 13.2599 5.53 14.4369 4.727 15.3339C4.93647 15.7888 5.18754 16.2233 5.477 16.6319C6.68072 16.3796 7.93521 16.5805 9 17.1959ZM12 14.9999C11.2044 14.9999 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 11.9999C9 11.2043 9.31607 10.4412 9.87868 9.87862C10.4413 9.31602 11.2044 8.99995 12 8.99995C12.7956 8.99995 13.5587 9.31602 14.1213 9.87862C14.6839 10.4412 15 11.2043 15 11.9999C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 14.9999 12 14.9999ZM12 12.9999C12.2652 12.9999 12.5196 12.8946 12.7071 12.7071C12.8946 12.5195 13 12.2652 13 11.9999C13 11.7347 12.8946 11.4804 12.7071 11.2928C12.5196 11.1053 12.2652 10.9999 12 10.9999C11.7348 10.9999 11.4804 11.1053 11.2929 11.2928C11.1054 11.4804 11 11.7347 11 11.9999C11 12.2652 11.1054 12.5195 11.2929 12.7071C11.4804 12.8946 11.7348 12.9999 12 12.9999Z" fill="black"></path>
+</svg>
+
+          Manage preferences
+        </a>
+      </li>
+      <hr>
+      <li>
+        <a class="crayons-link crayons-link--block" href="https://dev.to/report-abuse?billboard=1557">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M12.382 3a1 1 0 0 1 .894.553L14 5h6a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-6.382a1 1 0 0 1-.894-.553L12 16H5v6H3V3h9.382Zm-.618 2H5v9h8.236l1 2H19V7h-6.236l-1-2Z"></path>
+</svg>
+
+          Report billboard
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <div class="p-1 pt-3 text-styles text-styles--display-ad">
+      <h2>  <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#the-javascript-brief" class="anchor">  </a>  The JavaScript Brief</h2><h3>  <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#1-top-5-mern-stack-projects-to-improve-your-practical-understanding" class="anchor">  </a>  1. <a href="https://dev.to/documatic/top-5-mern-stack-projects-to-improve-your-practical-understanding-554k">Top 5 MERN STACK projects to improve your practical understanding</a>
+</h3><p>Boost your MERN Stack development skills by undertaking interesting beginner projects. These five engaging projects cover web applications and range from social media website applications to geo-social networking maps. Hone your understanding and apply modern techniques backed up by hands-on experience.</p><h3>  <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#2-how-to-optimize-your-react-apps-performance" class="anchor">  </a>  2. <a href="https://dev.to/devland/how-to-optimize-your-react-apps-performance-1045">How To Optimize Your React App’s Performance</a>
+</h3><p>Learn the best optimizing techniques to make your React applications faster and more efficient. Focusing on the identification of performance bottlenecks and common pitfalls to avoid, these optimization strategies will keep your applications running smoothly even when faced with growing complexity.</p><h3>  <a href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#3-a-story-of-let-const-object-mutation-and-a-bug-in-my-code" class="anchor">  </a>  3. <a href="https://dev.to/this-is-learning/a-story-of-let-const-object-mutation-and-a-bug-in-my-code-1del">A story of let, const, object mutation, and a bug in my code</a>
+</h3><p>In the pursuit of bug-free code, explore an incident involving a mix-up between <code>const</code> and <code>let</code>, making sure your custom code works effectively with third</p><p>party documentation. Discover best practices on program flow and learn about JavaScript's unpredictable aspects to ensure your core code is robust.</p>
+    </div>
+  </div>
+
+</div></div>
+      </div>
+
+          <section class="crayons-card crayons-card--secondary text-padding mb-4 print-hidden" id="bottom-content-read-next">
+    <h2 class="crayons-subtitle-1">Read next</h2>
+      <a href="https://dev.to/collegewap/how-to-use-media-queries-in-styled-components-54b7" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--DYTlXyVT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sto629zbbjniu4gua71l.jpg" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="collegewap profile image" class="crayons-avatar__image" width="100" height="100" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/048bec88-001b-4abe-8a24-e21cbc07207a.png">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">How to use media queries in styled components</h3>
+            <p class="opacity-75 pt-1">
+              collegewap - <time datetime="2023-04-09T08:18:34Z">Apr 9</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="https://dev.to/bladearya/how-to-set-up-protected-how-to-protect-routes-for-different-user-roles-with-restricted-access-59j5" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="bladearya profile image" class="crayons-avatar__image" width="100" height="100" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/42dfc7d6-cd11-453b-a681-7c259136c05f.png">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">How to protect routes for different user roles with restricted access?</h3>
+            <p class="opacity-75 pt-1">
+              BladeArya - <time datetime="2023-04-18T07:05:47Z">Apr 18</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="https://dev.to/periakteon/detayli-react-hooks-kullanimi-usestate-5a05" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--MgdXZl9---/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/szz8apgc5j0w17e7b974.png" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="periakteon profile image" class="crayons-avatar__image" width="100" height="100" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/284152eb-ae29-4c48-be6f-7c99c7b8714c.jpeg">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Detaylı React Hooks Kullanımı: useState</h3>
+            <p class="opacity-75 pt-1">
+              Masum Gökyüz - <time datetime="2023-04-04T13:30:43Z">Apr 4</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="https://dev.to/livecycle/developer-experience-is-more-important-than-ever-by-the-numbers-417m" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--528AnKcO--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ydjqiz9lf9xvj486k6xw.jpg" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="zevir profile image" class="crayons-avatar__image" width="100" height="100" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/733a2476-24fa-4d99-a46c-aa67b8aa3ba5.png">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Developer Experience is more important than ever (by the numbers)</h3>
+            <p class="opacity-75 pt-1">
+              Zevi Reinitz - <time datetime="2023-04-04T14:29:47Z">Apr 4</time>
+            </p>
+          </div>
+        </div>
+      </a>
+  </section>
+
+    </div>
+  </main>
+
+  <aside class="crayons-layout__sidebar-right" aria-label="Author details">
+    <div class="crayons-article-sticky grid gap-4 break-word" id="article-show-primary-sticky-nav">
+  <div class="crayons-card crayons-card--secondary branded-7 p-4 pt-0 gap-4 grid" style="border-top-color: #551029;">
+    <div class="-mt-4">
+  <a href="https://dev.to/ibaslogic" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/02283082-0865-4386-a8ae-c08b51134371(1).jpg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Ibas</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:334357,&quot;name&quot;:&quot;Ibas&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Ibas" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    I'm a learner, a teacher and a writer. I teach JavaScript, React, GraphQL, Gatsby, WordPress.
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Lagos, Nigeria
+          </div>
+        </li>
+          <li>
+            <div class="key">
+              Work
+            </div>
+            <div class="value">
+              Frontend Engineer
+            </div>
+          </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-02-12T03:02:34Z" class="date">Feb 11, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+      <div class="crayons-card crayons-card--secondary">
+        <header class="crayons-card__header">
+          <h3 class="crayons-subtitle-2">
+            More from <a href="https://dev.to/ibaslogic">Ibas</a>
+          </h3>
+        </header>
+        <div>
+            <a class="crayons-link crayons-link--contentful" href="https://dev.to/ibaslogic/5-simple-tips-to-learn-javascript-effectively-and-fast-369i">
+              5 Simple Tips to Learn JavaScript Effectively and Fast
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>developer</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>javascript</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>beginners</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>webdev</span>
+              </div>
+            </a>
+            <a class="crayons-link crayons-link--contentful" href="https://dev.to/ibaslogic/javascript-foreach-a-comprehensive-guide-for-beginners-5cao">
+              JavaScript Foreach: A Comprehensive Guide for Beginners
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>javascript</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>beginners</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>tutorial</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>webdev</span>
+              </div>
+            </a>
+            <a class="crayons-link crayons-link--contentful" href="https://dev.to/ibaslogic/object-oriented-javascript-complete-beginner-s-guide-30lk">
+              Object-Oriented JavaScript: Complete Beginner’s Guide
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>javascript</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>beginners</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>tutorial</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>webdev</span>
+              </div>
+            </a>
+        </div>
+      </div>
+</div>
+
+<div class="crayons-article-sticky grid gap-4 break-word pt-4 js-display-ad-container" data-async-url="/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch/display_ads/post_sidebar"><div>        <div class="crayons-card crayons-card--secondary crayons-sponsorship" data-display-unit="" data-id="2839" data-category-click="click" data-category-impression="impression" data-context-type="article" data-type-of="in_house" data-impression-recorded="true">
+    <div class="crayons-sponsorship__header relative">
+    <div class="crayons-sponsorship__title">DEV Community</div>
+
+  <button id="sponsorship-dropdown-trigger-2839" aria-controls="sponsorship-dropdown-2839" aria-expanded="false" aria-haspopup="true" class="dropBtn crayons-sponsorship__dropdown crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon" aria-label="Toggle dropdown menu" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ahtfns48xq8mvuzzh54u6q1yfduzbc22" class="crayons-icon pointer-events-none"><title id="ahtfns48xq8mvuzzh54u6q1yfduzbc22">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+  </button>
+
+  <div id="sponsorship-dropdown-2839" class="crayons-dropdown sponsorship-dropdown right-0">
+    <ul class="list-none m-0">
+        <li>
+          <a class="crayons-link crayons-link--block" href="https://dev.to/billboards">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
+</svg>
+
+            What's a billboard?
+          </a>
+        </li>
+      <li>
+        <a class="crayons-link crayons-link--block" href="https://dev.to/settings/customization#sponsors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M3.34 16.9999C2.91727 16.2689 2.58866 15.4874 2.362 14.6739C2.85531 14.423 3.26959 14.0406 3.55903 13.5688C3.84846 13.0971 4.00176 12.5545 4.00197 12.0011C4.00218 11.4476 3.84928 10.9049 3.5602 10.4329C3.27112 9.961 2.85712 9.57821 2.364 9.32694C2.81604 7.69243 3.67673 6.1999 4.865 4.98994C5.32909 5.29167 5.86762 5.45911 6.42098 5.47373C6.97434 5.48834 7.52095 5.34958 8.00033 5.07278C8.47971 4.79598 8.87315 4.39194 9.13713 3.90539C9.4011 3.41883 9.52531 2.86872 9.496 2.31594C11.1381 1.89157 12.8612 1.89226 14.503 2.31795C14.474 2.87071 14.5984 3.42073 14.8626 3.90715C15.1268 4.39357 15.5204 4.79742 15.9998 5.07401C16.4793 5.35059 17.0259 5.48913 17.5793 5.4743C18.1326 5.45946 18.671 5.29183 19.135 4.98994C19.714 5.57994 20.228 6.25095 20.66 6.99995C21.093 7.74895 21.417 8.52995 21.638 9.32595C21.1447 9.57685 20.7304 9.95932 20.441 10.4311C20.1515 10.9028 19.9982 11.4454 19.998 11.9988C19.9978 12.5523 20.1507 13.095 20.4398 13.5669C20.7289 14.0389 21.1429 14.4217 21.636 14.6729C21.184 16.3075 20.3233 17.8 19.135 19.0099C18.6709 18.7082 18.1324 18.5408 17.579 18.5262C17.0257 18.5115 16.479 18.6503 15.9997 18.9271C15.5203 19.2039 15.1268 19.6079 14.8629 20.0945C14.5989 20.5811 14.4747 21.1312 14.504 21.6839C12.8619 22.1083 11.1388 22.1076 9.497 21.6819C9.52605 21.1292 9.4016 20.5792 9.13742 20.0927C8.87324 19.6063 8.47964 19.2025 8.00017 18.9259C7.5207 18.6493 6.97405 18.5108 6.42073 18.5256C5.8674 18.5404 5.32896 18.7081 4.865 19.0099C4.27399 18.4069 3.76159 17.7315 3.34 16.9999ZM9 17.1959C10.0656 17.8106 10.8668 18.797 11.25 19.9659C11.749 20.0129 12.25 20.0139 12.749 19.9669C13.1324 18.7978 13.934 17.8114 15 17.1969C16.0652 16.5806 17.3205 16.3794 18.525 16.6319C18.815 16.2239 19.065 15.7889 19.273 15.3339C18.4524 14.4174 17.9991 13.2302 18 11.9999C18 10.7399 18.47 9.56295 19.273 8.66595C19.0635 8.21109 18.8125 7.77658 18.523 7.36795C17.3193 7.62025 16.0648 7.41942 15 6.80395C13.9344 6.18932 13.1332 5.20293 12.75 4.03394C12.251 3.98694 11.75 3.98594 11.251 4.03294C10.8676 5.20209 10.066 6.1885 9 6.80295C7.93478 7.41926 6.67948 7.62046 5.475 7.36795C5.18556 7.77623 4.93513 8.21081 4.727 8.66595C5.54757 9.5825 6.00088 10.7697 6 11.9999C6 13.2599 5.53 14.4369 4.727 15.3339C4.93647 15.7888 5.18754 16.2233 5.477 16.6319C6.68072 16.3796 7.93521 16.5805 9 17.1959ZM12 14.9999C11.2044 14.9999 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 11.9999C9 11.2043 9.31607 10.4412 9.87868 9.87862C10.4413 9.31602 11.2044 8.99995 12 8.99995C12.7956 8.99995 13.5587 9.31602 14.1213 9.87862C14.6839 10.4412 15 11.2043 15 11.9999C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 14.9999 12 14.9999ZM12 12.9999C12.2652 12.9999 12.5196 12.8946 12.7071 12.7071C12.8946 12.5195 13 12.2652 13 11.9999C13 11.7347 12.8946 11.4804 12.7071 11.2928C12.5196 11.1053 12.2652 10.9999 12 10.9999C11.7348 10.9999 11.4804 11.1053 11.2929 11.2928C11.1054 11.4804 11 11.7347 11 11.9999C11 12.2652 11.1054 12.5195 11.2929 12.7071C11.4804 12.8946 11.7348 12.9999 12 12.9999Z" fill="black"></path>
+</svg>
+
+          Manage preferences
+        </a>
+      </li>
+      <hr>
+      <li>
+        <a class="crayons-link crayons-link--block" href="https://dev.to/report-abuse?billboard=2839">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M12.382 3a1 1 0 0 1 .894.553L14 5h6a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-6.382a1 1 0 0 1-.894-.553L12 16H5v6H3V3h9.382Zm-.618 2H5v9h8.236l1 2H19V7h-6.236l-1-2Z"></path>
+</svg>
+
+          Report billboard
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <div class="p-1 pt-3 text-styles text-styles--display-ad">
+      <p><a href="https://dev.to/novu/celebrating-novu-20k-stars-14dk"><img src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/id5j4v1hmxwdr858qy7k.png" alt="Celebrating Novu @ 20k Stars cover image" width="1200" height="534" loading="lazy"></a></p><h2>  <a name="celebrating-novu-20k-stars" href="https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch#celebrating-novu-20k-stars">  </a>  <a href="https://dev.to/novu/celebrating-novu-20k-stars-14dk">Celebrating Novu @ 20k Stars</a></h2><p>We are incredibly thankful to the developer community for showering Novu with lots of love, feedback, PRs, stars and improvements!</p><p><strong><a href="https://dev.to/novu/celebrating-novu-20k-stars-14dk">Read full post</a></strong></p>
+    </div>
+  </div>
+
+</div></div>
+
+  </aside>
+</div>
+
+
+<div class="mod-actions-menu print-hidden"></div>
+<div data-testid="unpublish-post-modal-container" class="unpublish-post-modal-container hidden"></div>
+<div id="suspend-modal-content" class="hidden">
+  <p>
+    Once suspended, ibaslogic will not be able to comment or publish posts until their suspension is removed.
+  </p>
+
+  <div class="crayons-field mt-4">
+    <label for="suspend-reason-userid-334357" class="crayons-field__label">
+      Note:
+    </label>
+    <textarea id="suspend-reason-userid-334357" rows="4" cols="70" placeholder="Reason for suspension" class="crayons-textfield" aria-describedby="suspension-reason-error" required=""></textarea>
+    <p id="suspension-reason-error" data-testid="suspension-reason-error" class="suspend-reason-error crayons-field__description" style="color: red;" aria-live="assertive">
+    </p>
+  </div>
+  <div class="mt-4">
+    <button id="submit-user-suspend-btn" class="c-btn c-btn--primary c-btn--destructive" data-btn-action="suspend" data-reason-selector="#suspend-reason-userid-334357" data-user-id="334357" data-username="ibaslogic">
+      Submit &amp; Suspend
+    </button>
+  </div>
+</div>
+
+<div id="unsuspend-modal-content" class="hidden">
+  <p>
+    Once unsuspended, ibaslogic will be able to comment and publish posts again.
+  </p>
+
+  <div class="crayons-field mt-4">
+    <label for="unsuspend-reason-userid-334357" class="crayons-field__label">
+      Note:
+    </label>
+    <textarea id="unsuspend-reason-userid-334357" rows="4" cols="70" placeholder="Reason for unsuspension" class="crayons-textfield" aria-describedby="unsuspension-reason-error" required=""></textarea>
+    <p id="unsuspension-reason-error" data-testid="unsuspension-reason-error" class="unsuspend-reason-error crayons-field__description" style="color: red;" aria-live="assertive">
+    </p>
+  </div>
+  <div class="mt-4">
+    <button id="submit-user-unsuspend-btn" class="c-btn c-btn--primary" data-btn-action="unsuspend" data-reason-selector="#unsuspend-reason-userid-334357" data-user-id="334357" data-username="ibaslogic">
+      Submit &amp; Unsuspend
+    </button>
+  </div>
+</div>
+
+<div id="unpublish-all-posts" class="hidden">
+  <p>
+    Once unpublished, all posts by ibaslogic will become hidden and only accessible to themselves.
+  </p>
+  <p class="mt-2">
+    If ibaslogic is not suspended, they can still re-publish their posts from their dashboard.
+  </p>
+  <p class="mt-2"><label for="note_content">Note:</label><textarea name="note[content]" id="note_content" class="crayons-textfield note_content" placeholder="Note text"></textarea></p>
+  <div class="mt-4">
+    <button id="unpublish-all-posts-submit-btn" class="c-btn c-btn--destructive c-btn--primary" data-user-id="334357">
+      Unpublish all posts
+    </button>
+  </div>
+</div>
+
+<div id="unpublish-post-modal" class="hidden">
+  <p>
+    Once unpublished, this post will become invisible to the public and only accessible to Ibas.
+  </p>
+  <p>They can still re-publish the post if they are not suspended.</p>
+  <div class="mt-4">
+    <button destructive="" variant="primary" class="c-btn c-btn--primary c-btn--destructive" id="confirm-unpublish-post-action">
+      Unpublish Post
+    </button>
+  </div>
+</div>
+
+<div id="flag-user-modal-content" class="hidden">
+  <p>
+    Thanks for keeping DEV Community safe. Here is what you can do to flag ibaslogic:
+  </p>
+
+  <div class="crayons-field crayons-field--radio mt-4">
+    <input type="radio" id="flag-user-radio-input" name="flag-user-radio-input" class="crayons-radio" data-reactable-id="334357" data-category="vomit" data-reactable-type="User">
+    <label for="flag-user-radio-input" class="crayons-field__label">
+      Make all posts by ibaslogic less visible
+      <p class="crayons-field__description">
+        ibaslogic consistently posts content that violates DEV Community's
+        code of conduct because it is harassing, offensive or spammy.
+      </p>
+    </label>
+  </div>
+
+  <div class="mt-4">
+    <a href="javascript:void(0);" id="report-inappropriate-content" data-report-abuse-link="/report-abuse?url=https://dev.to/ibaslogic/react-tutorial-from-scratch-a-step-by-step-guide-2021-update-2dch">
+      Report other inappropriate conduct
+    </a>
+  </div>
+
+  <div class="mt-6">
+    <p id="unselected-radio-error" data-testid="unselected-radio-error" class="crayons-field__description mb-4" style="color: red;" aria-live="assertive">
+    </p>
+    <button id="confirm-flag-user-action" class="c-btn c-btn--primary c-btn--destructive" data-category="vomit" data-reactable-type="User" data-user-id="334357" data-username="ibaslogic">
+      Confirm Flag
+    </button>
+  </div>
+</div>
+
+<div id="unflag-user-modal-content" class="hidden">
+  <p>
+    Unflagging ibaslogic will restore default visibility to their posts.
+  </p>
+
+  <div class="mt-6">
+    <button id="confirm-unflag-user-action" class="c-btn c-btn--primary" data-category="vomit" data-reactable-type="User" data-user-id="334357" data-username="ibaslogic">
+      Confirm Unflag
+    </button>
+  </div>
+</div>
+
+
+<div class="fullscreen-code js-fullscreen-code"></div>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~followButtons-a7737c7dfb928a45d890.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/6-4abd8cf9b4544635518c.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/followButtons-139cc0cb0601d919e3e0.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~billboard-728c603f2dc8755ce211.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/billboard-cc0173e4a01c8e8afb56.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~localizeArticleDates-ea97f8dcb0859198f41e.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/localizeArticleDates-fe0f90e6976a08e2b011.chunk.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~articleReactions-5dddb0fe0f4544ce8aa1.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/articleReactions-33c75789df6c7fe25128.chunk.js.download" defer="defer"></script>
+
+  <script>
+    var waitingOnPodcast = setInterval(function() {
+  if (typeof initializePodcastPlayback !== 'undefined') {
+    initializePodcastPlayback();
+    clearInterval(waitingOnPodcast);
+  }
+}, 1);
+
+    if (document.head.querySelector('meta[name="user-signed-in"][content="true"]')) {
+  function displayPollResults(json) {
+    var totalVotes = json.voting_data.votes_count;
+    json.voting_data.votes_distribution.forEach(function(point) {
+      var pollOptionItem = document.getElementById('poll_option_list_item_'+point[0]);
+      var optionText = document.getElementById('poll_option_label_'+point[0]).textContent;
+      if (json.user_vote_poll_option_id === point[0]) {
+        var votedClass = 'optionvotedfor'
+      } else {
+        var votedClass = 'optionnotvotedfor'
+      }
+      if (totalVotes === 0) {
+        var percent = 0;
+      } else {
+        var percent = (point[1]/totalVotes)*100;
+      }
+      var roundedPercent = Math.round( percent * 10 ) / 10
+      var percentFromRight = (100-roundedPercent)
+      var html = '<span><span class="ltag-votepercent ltag-'+votedClass+'" style="right:'+percentFromRight+'%"></span>        <span class="ltag-votepercenttext">'+optionText+' — '+roundedPercent+'%</span></span>';
+      pollOptionItem.innerHTML = html;
+      pollOptionItem.classList.add('already-voted')
+      document.getElementById('showmethemoney-'+json.poll_id).innerHTML = '<span class="ltag-voting-results-count">'+totalVotes+' total votes</span>';
+    })
+  }
+
+  var polls = document.getElementsByClassName('ltag-poll');
+  for (var i = 0; i < polls.length; i += 1) {
+    var poll = polls[i]
+    var pollId = poll.dataset.pollId
+    window.fetch('/poll_votes/'+pollId)
+    .then(function(response){
+      response.json().then(
+        function(json) {
+          if (json.voted) {
+            displayPollResults(json)
+          } else {
+            var els = document.getElementById('poll_'+json.poll_id).getElementsByClassName('ltag-polloption');
+
+            for (i = 0; i < els.length; i += 1) {
+              els[i].addEventListener('click', function(e) {
+                var tokenMeta = document.querySelector("meta[name='csrf-token']")
+                if (!tokenMeta) {
+                  alert('Whoops. There was an error. Your vote was not counted. Try refreshing the page.')
+                  return
+                }
+                var csrfToken = tokenMeta.getAttribute('content')
+                var optionId = e.target.dataset.optionId
+                window.fetch('/poll_votes', {
+                  method: 'POST',
+                  headers: {
+                    'X-CSRF-Token': csrfToken,
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({poll_vote: { poll_option_id: optionId } }),
+                  credentials: 'same-origin',
+                }).then(function(response){
+                  response.json().then(function(j){displayPollResults(j)})
+                })
+              });
+            }
+
+            document.getElementById('showmethemoney-'+json.poll_id).addEventListener('click', function() {
+              pollId = this.dataset.pollId
+              window.fetch('/poll_skips', {
+                method: 'POST',
+                headers: {
+                  'X-CSRF-Token': csrfToken,
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({poll_skip: {poll_id: pollId }}),
+                credentials: 'same-origin',
+              }).then(function(response){
+                response.json().then(function(j){displayPollResults(j)})
+              })
+            });
+          }
+        }
+      )
+    })
+  }
+} else {
+    var els = document.getElementsByClassName('ltag-poll')
+    for (i = 0; i < els.length; i += 1) {
+      els[i].onclick = function(e) {
+        if (typeof showLoginModal !== "undefined") {
+          showLoginModal();
+        }
+      }
+    }
+}
+
+    function activateRunkitTags() {
+  if (!areAnyRunkitTagsPresent())
+    return
+
+  var checkRunkit = setInterval(function() {
+    try {
+      dynamicallyLoadRunkitLibrary()
+
+      if (typeof(RunKit) === 'undefined') {
+        return
+      }
+
+      replaceTagContentsWithRunkitWidget()
+      clearInterval(checkRunkit);
+    } catch(e) {
+      console.error(e);
+      clearInterval(checkRunkit);
+    }
+  }, 200);
+}
+
+function isRunkitTagAlreadyActive(runkitTag) {
+  return runkitTag.querySelector("iframe") !== null;
+};
+
+function areAnyRunkitTagsPresent() {
+  var presentRunkitTags = document.getElementsByClassName("runkit-element");
+
+  return presentRunkitTags.length > 0
+}
+
+function replaceTagContentsWithRunkitWidget() {
+  var targets = document.getElementsByClassName("runkit-element");
+  for (var i = 0; i < targets.length; i++) {
+    if (isRunkitTagAlreadyActive(targets[i])) {
+      continue;
+    }
+
+    var wrapperContent = targets[i].textContent;
+    if (/^(<iframe src)/.test(wrapperContent) === false) {
+      if (targets[i].children.length > 0) {
+        var preamble = targets[i].children[0].textContent;
+        var content = targets[i].children[1].textContent;
+        targets[i].innerHTML = "";
+        var notebook = RunKit.createNotebook({
+          element: targets[i],
+          source: content,
+          preamble: preamble
+        });
+      }
+    }
+  }
+};
+
+function dynamicallyLoadRunkitLibrary() {
+  if (typeof(dynamicallyLoadScript) === "undefined")
+    return
+
+  dynamicallyLoadScript("//embed.runkit.com")
+}
+
+activateRunkitTags();
+
+    var videoPreviews = document.getElementsByClassName("ltag__twitter-tweet__media__video-wrapper");
+[].forEach.call(videoPreviews, function(el) {
+  el.onclick = function(e) {
+    var divHeight = el.offsetHeight;
+    el.style.maxHeight = divHeight + "px";
+    el.getElementsByClassName("ltag__twitter-tweet__media--video-preview")[0].style.display = "none";
+    el.getElementsByClassName("ltag__twitter-tweet__video")[0].style.display = "block";
+    el.getElementsByTagName("video")[0].play();
+  }
+});
+var tweets = document.getElementsByClassName("ltag__twitter-tweet__main");
+[].forEach.call(tweets, function(tweet){
+  tweet.onclick = function(e) {
+    if (e.target.nodeName == "A" || e.target.parentElement.nodeName == "A") {
+      return;
+    }
+    window.open(tweet.dataset.url,"_blank");
+  }
+});
+
+  </script>
+
+    
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="https://dev.to/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="">
+        <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com/">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="">
+        <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com/">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">©</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"><div class="hidden"></div></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/devlogo-pwa-512(1).png" alt="DEV Community" loading="lazy">
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We're a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="https://dev.to/enter" class="crayons-btn" aria-label="Log in" data-no-instant="">
+        Log in
+      </a>
+      <a href="https://dev.to/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant="">
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/runtime~signupModalShortcuts-c4660aa846bb61bb8cf0.js.download" defer="defer"></script>
+<script src="./React Tutorial_ A Comprehensive Guide for Beginners (2023) - DEV Community_files/signupModalShortcuts-a01217a6efc498ea573e.chunk.js.download" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  
+  
+</body></html>
